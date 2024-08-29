@@ -1,1 +1,9 @@
-site_name: My Docs
+site_name: Cucumber Diseases
+theme:
+  name: readthedocs
+nav:
+  - index.md
+  - howto.md
+  - practice-repos.md
+  - smells.md
+  - contribution.md
