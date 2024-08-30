@@ -1,8 +1,14 @@
 # 013: Active Sideeffects in Then Step
 tbd
 
-## Impacts
-tbd
+=== "Smell Description"
 
-## Your Task
-tbd
+
+    ## Impacts
+    tbd
+
+    ## Your Task
+    tbd
+
+=== "Deliberate Practice"
+    tbd
