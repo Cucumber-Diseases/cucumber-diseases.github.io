@@ -50,7 +50,10 @@ nav:
   - Cucumber Smells:
     - smells/index.md
     - smells/001-missing-then.md
-  - contribution.md
+  - Contributing:
+    - contrib/index.md
+    - contrib/add_smell.md
+    - contrib/add_repo.md
 
 markdown_extensions: 
   - attr_list
