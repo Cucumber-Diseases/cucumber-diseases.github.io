@@ -4,6 +4,6 @@ jobs:
   deploy-mkdocs-ghpages:
      runs-on: ubuntu-latest
      steps:
-       - name: Deploy MkDocs
-         uses: mhausenblas/mkdocs-deploy-gh-pages@1.26
+       - run: pip install mkdocs
+       - run: mkdocs gh-deploy
           
