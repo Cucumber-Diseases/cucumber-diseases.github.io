@@ -1,8 +1,8 @@
 # Introduction
 
-## Tutorials
+## Practice Repositories
 
-Tutorials help you get started with our repositories and exercises.
+On the Practice Repositories page, you will find tutorials that guide you through getting started with our repositories and exercises.
 
 
 
