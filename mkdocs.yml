@@ -1,6 +1,7 @@
 site_name: Cucumber Diseases
+site_description: "Dedicated practice to identify and improve your BDD code."
 theme:
-  name: readthedocs
+  name: 'material'
 nav:
   - index.md
   - howto.md

@@ -14,4 +14,4 @@ Special thanks goes to the many people who helped to shape the smells and code, 
 * Thomas Goldberger
 * Katrin Heiderer ([@heidererkatrin](https://github.com/heidererkatrin))
 
-You want to contribute as well? Take a look at the [Contribution section](/contribution/).
+You want to contribute as well? Take a look at the [Contribution section](contribution.md).
