@@ -67,6 +67,14 @@ nav:
     - smells/003-data-collector.md
     - smells/004-redundant-mirror-image.md
     - smells/005-multiple-when-steps.md
+    - smells/006-given-when-purpose-mismatch.md
+    - smells/007-rotting-steps.md
+    - smells/008-singular-plural-logic-clones.md
+    - smells/009-dead-steps.md
+    - smells/010-hardcoded-parameters.md
+    - smells/011-dependence-on-class-state.md
+    - smells/012-test-code-impurity.md
+    - smells/013-active-sideeffects-in-then-step.md
   - Contributing:
     - contrib/index.md
     - contrib/add_smell.md

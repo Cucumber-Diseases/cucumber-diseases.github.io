@@ -1,0 +1,23 @@
+# 007: Rotting Steps
+
+“Rotting Steps” refer to Gherkin steps within a scenario that lack meaningful purpose or relevance.
+These steps may have empty implementations or contribute nothing substantial to the scenario.
+They often appear in “Given” steps, where they set up initial conditions but fail to add value.
+
+## Impact
+
+!!! danger "Misleading Code"
+    Readers may assume these steps play a crucial role when they don’t.
+
+!!! failure "Harder Maintenance"
+    Empty or irrelevant steps require unnecessary upkeep.
+
+!!! warning "Scenario Clutter"
+    Unnecessary steps make scenarios harder to read and understand.
+
+## Your task
+Eliminate steps that don’t contribute to the behavior being tested. Indicators are:
+
+* "Given" step used only once and implicitly setup,
+* "Given" steps covered already by a "Background" step
+* Empty implementations
