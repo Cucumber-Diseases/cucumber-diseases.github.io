@@ -6,6 +6,7 @@ tbd
 ## What are code smells?
 The term code smell was originally mentioned by Kent Beck as explained by Martin Fowler’s [description](https://www.martinfowler.com/bliki/CodeSmell.html) of code smells.
 
+!!! quote ""
 **"A code smell is a surface indication that usually corresponds to a deeper problem in the system." Kent Beck, Martin Fowler**
 
 While a code smell doesn't necessarily mean the code is incorrect or non-functional, it suggests that the code may be poorly designed, difficult to maintain, or prone to bugs. Code smells often point to deeper issues in the codebase that could lead to more significant problems if not addressed.
