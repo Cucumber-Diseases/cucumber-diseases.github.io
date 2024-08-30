@@ -1,6 +1,5 @@
 # 001: Missing Then Implementation
 
-## Description
 This smell refers to steps within your Gherkin scenarios that lack assertions (specifically, “Then” steps).
 When you encounter a step without an assertion, it means that the scenario doesn’t verify any expected outcome or behavior.
 Essentially, it’s like having a test case without an assertion in your test suite.
