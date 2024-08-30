@@ -1,0 +1,7 @@
+name: MkDocs
+on: [push]
+jobs:
+  deploy-mkdocs-ghpages:
+    - name: Deploy MkDocs
+      uses: mhausenblas/mkdocs-deploy-gh-pages@1.26
+          
