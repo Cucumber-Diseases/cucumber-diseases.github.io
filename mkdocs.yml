@@ -76,6 +76,9 @@ nav:
     - smells/011-dependence-on-class-state.md
     - smells/012-test-code-impurity.md
     - smells/013-active-sideeffects-in-then-step.md
+  - Deliberate Exercise:
+    - exercise/index.md
+    - exercise/ex-001-missing-then.md
   - Contributing:
     - contrib/index.md
     - contrib/add_smell.md
