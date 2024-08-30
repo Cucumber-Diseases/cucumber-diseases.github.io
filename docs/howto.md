@@ -19,7 +19,7 @@ While a code smell doesn't necessarily mean the code is incorrect or non-functio
 There are several lists of code smells available online. One of the most well-known is found in Martin Fowler’s book Refactoring. Additionally, you can explore other widely recognized lists on platforms such as Wikipedia, [Coding Horror](https://blog.codinghorror.com/code-smells/) and [Refactoring Guru](https://refactoring.guru/refactoring/smells). These resources provide comprehensive overviews of common code smells and offer insights into best practices for identifying and addressing them.
 
 ## Fixing first smells
-Once you've set up the repository and are familiar with the structure, you can begin practicing the identification and refactoring of code smells:
+Once you've set up the [repository](https://cucumber-diseases.github.io/repos/) and are familiar with the structure, you can begin practicing the identification and refactoring of code smells:
 
 * [Start with Exploration:](repos/index.md#using-git-tags-to-explore-smells) Begin by checking out the initial `Customer.feature` file in the repository. Examine the feature file and associated step definitions to see if you can identify any potential code smells on your own.
 * [Use Git Tags for Guided Practice:](repos/index.md#compare-with-the-solution) If you're unsure where to start, use the Git tags to jump directly to known code smells. For example, check out the smell-01 tag to explore the first documented code smell in the repository.
