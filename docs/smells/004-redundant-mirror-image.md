@@ -5,8 +5,11 @@ When the same implementation logic appears multiple times with different express
 Even if the expressions seem completely mismatched (representing opposite behaviors, such as success and failure cases), both scenarios verify the same behavior.
 
 ## Impact
-* Maintenance: Any change to one step affects all implementations.
-* Risk of Inconsistency: If one side of the mirror image is updated without considering the other, scenarios may become inconsistent.
+!!! danger "Test Inconsistency"
+    If one side of the mirror image is updated without considering the other, scenarios may become inconsistent.
+
+!!! failure "Harder Maintenance"
+    Any change to one step affects all implementations.
 
 ## Your task
 Identify steps that share the same implementation but describe asymmetric behavior. If you find such steps, consider consolidating them by using multiple expressions for a single implementation.

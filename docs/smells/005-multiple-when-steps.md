@@ -5,9 +5,15 @@ When a scenario contains multiple “When” steps, it indicates an issue within
 Are you using multiple “When” steps are to store multiple results? This leads to unclear and suspicious assertions in the "Then" step.
 
 ## Impact:
-* Clarity: Combining behaviors into a single scenario leads to ambiguity and miscommunication.
-* Root Cause Analysis: When a test fails, identifying the root cause becomes challenging because it could be related to any of the multiple behaviors.
-* Duplication: Scenarios that repeat the same sequence of steps instead of isolating behaviors risk unnecessary duplication.
+
+!!! failure "Reduced Clarity"
+    Combining behaviors into a single scenario leads to ambiguity and miscommunication.
+
+!!! failure "Harder Analysis"
+    When a test fails, identifying the root cause becomes challenging because it could be related to any of the multiple behaviors.
+
+!!! warning "Duplication"
+    Scenarios that repeat the same sequence of steps instead of isolating behaviors risk unnecessary duplication.
 
 ## Your task
 

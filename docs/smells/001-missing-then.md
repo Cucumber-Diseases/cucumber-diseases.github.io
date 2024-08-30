@@ -5,9 +5,14 @@ When you encounter a step without an assertion, it means that the scenario doesn
 Essentially, it’s like having a test case without an assertion in your test suite.
 
 ## Impact
-* Without assertions, your scenarios may not effectively validate the system’s behavior.
-* Unverified steps can lead to false positives (where a scenario passes even if it shouldn’t).
-* It undermines the purpose of behavior-driven development (BDD) because the scenarios don’t provide meaningful feedback.
+!!! bug "Missing System Validation"
+    Without assertions, your scenarios may not effectively validate the system’s behavior.
+
+!!! bug "Makes BDD Irrelevant"
+    It undermines the purpose of behavior-driven development (BDD) because the scenarios don’t provide meaningful feedback.
+
+!!! danger "False-Positives"
+    Unverified steps can lead to false positives (where a scenario passes even if it shouldn’t).
 
 ## Your task
 Identify all steps within your Gherkin scenarios that lack assertions. Then, choose one of these steps to implement the missing assertion.
