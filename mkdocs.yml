@@ -54,7 +54,6 @@ nav:
   - Overview:
     - index.md
     - intro/contributors.md
-    - howto.md
   - Practice Repositories:
     - repos/index.md
     - repos/java.md
