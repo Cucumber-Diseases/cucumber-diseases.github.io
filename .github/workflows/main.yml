@@ -1,5 +1,7 @@
 name: MkDocs
 on: [push]
+permissions:
+  contents: write
 jobs:
   deploy-mkdocs-ghpages:
      runs-on: ubuntu-latest
