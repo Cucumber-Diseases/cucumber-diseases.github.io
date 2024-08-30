@@ -74,8 +74,8 @@ nav:
     - smells/009-dead-steps.md
     - smells/010-hardcoded-parameters.md
     - smells/011-dependence-on-class-state.md
-    - smells/012-test-code-impurity.md
-    - smells/013-active-sideeffects-in-then-step.md
+    - smells/012-active-sideeffects-in-then-step.md
+    - smells/013-test-code-impurity.md
   - Deliberate Exercise:
     - exercise/index.md
     - exercise/ex-001-missing-then.md
