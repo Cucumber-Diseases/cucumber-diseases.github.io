@@ -7,7 +7,7 @@ This content has a lot of different uses, and it can help with all kinds of diff
   - **Goal:** Understand the common structure of the repositories.
 
 ## [Coding Exercises](https://cucumber-diseases.github.io/exercise/)
-   - If you're focused on praticing your coding skills, dive into the provided exercises. These challenges will put your problem-solving abilities to the test.
+   - If you're focused on practicing your coding skills, dive into the provided exercises. These challenges will put your problem-solving abilities to the test.
    - **Goal:** Strengthen your coding excellence by deliberate exercises.
 
 ## [Understanding Cucumber Diseases](https://cucumber-diseases.github.io/smells/)
