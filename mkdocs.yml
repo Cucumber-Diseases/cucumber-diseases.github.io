@@ -1,10 +1,63 @@
 site_name: Cucumber Diseases
 site_description: "Dedicated practice to identify and improve your BDD code."
+repo_url: https://github.com/Cucumber-Diseases
 theme:
   name: 'material'
+  logo: 'assets/smelly_cucumber_transparent.png'
+  favicon: 'assets/smelly_cucumber_transparent.png'
+  icon:
+    repo: fontawesome/brands/github
+  palette:
+    # Palette toggle for automatic mode
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default 
+      primary: light-green
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: green
+      toggle:
+        icon: material/brightness-4
+        name: Switch to system preference
+  features:
+    - content.code.copy
+    - navigation.expand
+    - navigation.sections
+    - navigation.indexes
+    - navigation.tabs
+
 nav:
-  - index.md
-  - howto.md
-  - practice-repos.md
-  - smells.md
+  - Overview:
+    - index.md
+    - intro/contributors.md
+    - howto.md
+  - Practice Repositories:
+    - repos/index.md
+    - repos/java.md
+    - repos/go.md
+    - repos/python.md
+    - repos/csharp.md
+  - Cucumber Smells:
+    - smells/index.md
+    - smells/001-missing-then.md
   - contribution.md
+
+markdown_extensions: 
+  - attr_list
+  - md_in_html
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences
