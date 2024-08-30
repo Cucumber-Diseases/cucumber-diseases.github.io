@@ -5,5 +5,7 @@ jobs:
      runs-on: ubuntu-latest
      steps:
        - run: pip install mkdocs
+       - name: Check out repository code
+         uses: actions/checkout@v4
        - run: mkdocs gh-deploy
           
