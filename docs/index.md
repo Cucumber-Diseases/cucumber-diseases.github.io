@@ -8,7 +8,7 @@ This content has a lot of different uses, and it can help with all kinds of diff
 
 - **Coding Exercises:**
    - If you're focused on honing your coding skills, dive into the provided exercises. These challenges will put your problem-solving abilities to the test.
-   - Learn how to set up and work with the GitHub repositories Strengthen your coding proficiency.
+   - **Goal:** Strengthen your coding excellence by deliberate exercises.
 
 - **Understanding Cucumber Smells:**
    - Delve deeper into the world of Cucumber by examining the "smells." These are common issues or anti-patterns that can arise when using Gherkin and the programming specific frameworks and tools.
