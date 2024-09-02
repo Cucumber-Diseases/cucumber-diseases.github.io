@@ -17,5 +17,24 @@ By passing data piece by piece, this pattern leads to long scripts with individu
 !!! warning "Increased Script Length"
     The scenario becomes verbose due to numerous steps dedicated to setting field values.
 
-## Your taks
-Find the “Data Collector” in the customer.feature file. Replace the multiple 'Given' steps with a single step that passes the entire data object (from the same domain) at once.
+## Required Action
+Replace multiple `Given` steps with a single step that passes the entire data object (from the same domain) at once. If required introduce a new step that initializes a domain object with all parameters required in a single step.
+
+## Code Examples
+
+=== "Before"
+    ```gherkin title="Customer.feature"
+        Scenario: Should successfully create new customer
+        Given the customer first name is "Max"
+        And the customer last name is "Mustermann"
+        When the customer is created
+        Then the customer creation should be successful
+    ```
+
+=== "After"
+    ```gherkin title="Customer.feature"
+        Scenario: Should successfully create new customer
+        Given the customer name is Max Mustermann
+        When the customer is created
+        Then the customer creation should be successful
+    ```

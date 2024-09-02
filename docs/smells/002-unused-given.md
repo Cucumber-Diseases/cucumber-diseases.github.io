@@ -19,8 +19,23 @@ Possible reasons include:
 !!! failure "Increased Complexity"
     Unused parameters clutter the scenario and add unnecessary complexity.
 
-## Your task
-In our code there is a field/property which is initialized by a step but never used afterwards. Find this field, analyze why it is not used and decide either to remove it or to use it. 
+## Required Action
+Search your code for any field/property which is initialized by a step but never used afterwards. Find these fields, analyze why it is not used and decide either to remove it or to use it: 
 
 * **Remove It**: If the parameter serves no purpose, eliminate it.
 * **Use It**: If the parameter has a valid role, ensure it’s utilized appropriately.
+
+## Code Examples
+
+=== "Gherkin"
+    ```gherkin title="Customer.feature"
+        Scenario: Should successfully create new customer
+        Given the customer first name is "Max"
+        And the customer last name is "Mustermann" # (1)
+        And the customer's birthday is 2000/03/19 
+        When the customer is created
+        Then the customer creation should be successful
+    ```
+
+
+    1. Mind that `birthday` is set but not checked in the `Then` steps. The `birthday` is also not evaluated in any hidden assertions within the `Then the customer creation should be successful` step.
