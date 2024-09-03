@@ -25,13 +25,12 @@ Eliminate steps that don’t contribute to the behavior being tested. Indicators
 
 ## Code Examples
 
-=== "Before"
-    ```gherkin title="Customer.feature"
-        Scenario: Should find newly created customer
+```gherkin title="Customer.feature"
+   Scenario: Should find newly created customer
         Given there are no customers # (1)
         And the customer name is Rose Smith
         When the customer is created
         Then the customer can be found
-    ```
+```
 
     1. The step `Given there are no customers` does not add any value as this is the default condition for a scenario. It is verbose expressiveness without adding function or value to the step.
