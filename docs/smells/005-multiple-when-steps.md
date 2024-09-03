@@ -2,7 +2,7 @@
 
 The *Multiple When Steps* code smell violates the fundamental principle of Behavior-Driven Development (BDD): **One Scenario, One Behavior!**
 
-When a scenario contains multiple `When` steps, it indicates an issue within the scope or the purpose of your test case. Are you using multiple “When” steps are to store multiple results? This leads to unclear and suspicious assertions in the `Then` step.
+When a scenario contains multiple `When` steps, it indicates an issue within the scope or the purpose of your test case. Are you using "Multiple When Steps" to store multiple results? This leads to unclear and suspicious assertions in the `Then` step.
 
 If you encounter this smell, the `When` step is misused in order to execute or prepare a functionality that is not directly under test by the scenario for it's side effects. Very often this is to prepare some condition required by the verification in the following `Then` steps.
 
