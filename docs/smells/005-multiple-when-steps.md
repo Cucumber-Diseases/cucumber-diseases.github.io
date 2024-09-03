@@ -4,7 +4,7 @@ The *Multiple When Steps* code smell violates the fundamental principle of Behav
 
 When a scenario contains multiple `When` steps, it indicates an issue within the scope or the purpose of your test case. Are you using multiple “When” steps are to store multiple results? This leads to unclear and suspicious assertions in the `Then` step.
 
-In most cases when you encounter this smell, the `When` step is misused in order to execute or prepare a functionality that is not directly under test by the scenario for it's side effects. Very often this is to prepare some condition required by the verification in the following `Then` steps.
+If you encounter this smell, the `When` step is misused in order to execute or prepare a functionality that is not directly under test by the scenario for it's side effects. Very often this is to prepare some condition required by the verification in the following `Then` steps.
 
 ## Impact:
 
@@ -33,4 +33,4 @@ Scenario: Should find newly created customer
     Then the number of customers found is 1
 ```
 
-Note the `When ... And ...` composition of the scenario. In this case the author is misuing `And all customers are searched` as a `When` clause, when it is not the functionality under test. Instead, searching all customers is part of the verification and assertion of the `Then` step. A viable solution would be to introduce a `Then` step that represents `search and check the returned number of customers`.
+Note the `When ... And ...` composition of the scenario. In this case the author is misusing `And all customers are searched` as a `When` clause, even though it is not the functionality under test. Instead, searching all customers is part of the verification and assertion of the `Then` step. A viable solution would be to introduce a `Then` step that represents `search and check the returned number of customers`.
