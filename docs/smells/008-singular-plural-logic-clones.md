@@ -29,17 +29,18 @@ When you identify a `Singular-Plural Logic Clones` in your scenario, there are m
 ### Gherkin
 ```gherkin
 Scenario: Should find an existing customer
-    Given there is a customer Sabine Mustermann # (1)
+    Given there is a customer # (1)
+        | Sabine | Mustermann |
     Then the customer Sabine Mustermann can be found
 
 # ...
 
 Scenario: Should find multiple customers
     Given there are some customers # (1)
-    | firstname | lastname   |
-    | Max       | Mustermann |
-    | Sabine    | Mustermann |
-    | Horst     | Mustermann |
+        | firstname | lastname   |
+        | Max       | Mustermann |
+        | Sabine    | Mustermann |
+        | Horst     | Mustermann |
     When all customers are searched
     Then the number of customers found is 3
 ```
@@ -78,5 +79,26 @@ Scenario: Should find multiple customers
 
 === "Go"
     ```go title="customer_test.go"
+    func InitializeScenario(sc *godog.ScenarioContext) {
+        // ...
+        sc.Given(`there is a customer`, t.thereIsACustomer)
+	    sc.Given(`there are some customers`, t.thereAreSomeCustomers)
+        // ...
+    }
 
+    func (t *CustomerTestSteps) thereIsACustomer(ctx context.Context, table *godog.Table) error {
+        row := table.Rows[0]
+        t.customerService.AddCustomer(row.Cells[0].Value, row.Cells[1].Value, DEFAULT_BIRTHDAY)
+        return nil
+    }
+
+    func (t *CustomerTestSteps) thereAreSomeCustomers(ctx context.Context, table *godog.Table) error {
+        for i, row := range table.Rows {
+            if i == 0 {
+                continue // skip header...
+            }
+            t.customerService.AddCustomer(row.Cells[0].Value, row.Cells[1].Value, DEFAULT_BIRTHDAY)
+        }
+        return nil
+    }
     ```
