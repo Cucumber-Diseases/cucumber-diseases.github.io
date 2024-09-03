@@ -11,8 +11,8 @@ Essentially, it’s like having a test case without an assertion in your test su
 !!! bug "Makes BDD Irrelevant"
     It undermines the purpose of behavior-driven development (BDD) because the scenarios don’t provide meaningful feedback.
 
-!!! danger "False-Positives"
-    Unverified steps can lead to false positives (where a scenario passes even if it shouldn’t).
+!!! danger "False-Negatives"
+    Unverified steps can lead to false negatives (where a scenario passes even if it shouldn’t).
 
 ## Required Action
 Identify all steps within your Gherkin scenarios that lack assertions. Then, choose one of these steps to implement the missing assertion.
@@ -29,9 +29,9 @@ Decide which criteria apply and select the step depending on your answers:
     ```java title="CustomerStepDefinitons.java"
     // ...
     @Then("the customer creation should be successful")
-        public void theCustomerCreationShouldBeSuccessful() {
-            //(1)!
-        }
+    public void theCustomerCreationShouldBeSuccessful() {
+       //(1)!
+    }
     // ...
     ```
 
