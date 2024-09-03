@@ -2,7 +2,7 @@
 
 “Rotting Steps” refer to Gherkin steps within a scenario that lack meaningful purpose or relevance.
 These steps may have empty implementations or contribute nothing substantial to the scenario.
-They often appear in “Given” steps, where they set up initial conditions but fail to add value.
+They often appear in 'Given” steps, where they set up initial conditions but fail to add value.
 
 ## Impact
 
@@ -15,9 +15,21 @@ They often appear in “Given” steps, where they set up initial conditions but
 !!! warning "Scenario Clutter"
     Unnecessary steps make scenarios harder to read and understand.
 
-## Your task
+## Required Action
 Eliminate steps that don’t contribute to the behavior being tested. Indicators are:
 
-* "Given" step used only once and implicitly setup,
-* "Given" steps covered already by a "Background" step
+* `Given` step used only once and implicitly setup,
+* `Given` steps covered already by a `Background` step
 * Empty implementations
+
+
+## Code Examples
+
+=== "Before"
+    ```gherkin title="Customer.feature"
+        Scenario: Should find newly created customer
+        Given there are no customers
+        And the customer name is Rose Smith
+        When the customer is created
+        Then the customer can be found
+    ```
