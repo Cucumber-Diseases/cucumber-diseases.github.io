@@ -25,6 +25,7 @@ When you identify a `Singular-Plural Logic Clones` in your scenario, there are m
 * **Ensure Consistent Syntax**: Standardize the parameter handling syntax across all step definitions to improve readability and maintainability.
 
 ## Code Examples
+To understand this smell, please refer to the Gherkin code as well as the code in the implementation in one of the programming languages. It makes the most sense if the scenarios and the implementation are both read together.
 
 ### Gherkin
 ```gherkin
@@ -71,13 +72,42 @@ Scenario: Should find multiple customers
     
 === "Python"
     ```python title="features/steps/steps.py"
+    @given(u'there is a customer') # (1)!
+    def step_impl(context):
+            table = context.table
+            context.service.add_customer(table.headings[0], table.headings[1], context.default_birthday)
+
+    @given(u'there are some customers')
+    def step_impl(context):
+        for row in context.table.rows:
+            context.service.add_customer(row["firstname"], row["lastname"], context.default_birthday)
 
     ```
+
+    1. The expressions `there is a customer` and `there are some customers` handle the singular and plural case of the same step. The share a similar logic and can therefore be merged.
+
 
 === "C#"
     ```csharp title="CucumberDiseases.Specs/StepDefinitions/CustomerStepDefinitions.cs"
+    [Given("there is a customer")] // (1)!
+    public void GivenThereIsACustomer(Table customerTable)
+    {
+        var customer = customerTable.Header.ToArray();
+        _customerService.AddCustomer(customer[0], customer[1], DefaultBirthday);
+    }
 
+    [Given("there are some customers")]
+    public void GivenThereAreSomeCustomers(Table customerTable)
+    {
+        var customers = customerTable.CreateSet<CustomerData>(() => new CustomerData("John", "Doe", DefaultBirthday));
+        foreach (var customer in customers)
+        {
+            _customerService.AddCustomer(customer.FirstName, customer.LastName, customer.Birthday);
+        }
+    }
     ```
+
+    1. The expressions `there is a customer` and `there are some customers` handle the singular and plural case of the same step. The share a similar logic and can therefore be merged.
 
 === "Go"
     ```go title="customer_test.go"
