@@ -18,12 +18,15 @@ This code smell occurs when there are multiple, nearly identical implementations
 
 
 ## Required Action
-Options to resolve a Singular-Plural Logic Clone are:
+When you identify a `Singular-Plural Logic Clones` in your scenario, there are multiple ways to resolve them:
+
 * **Combine Step Definitions**: Merge the singular and plural step definitions into a single definition with multiple expressions and using parameterization to handle variations.
 * **Use Regular Expressions / Leverage Parameter Handling**: Consider using regular expressions or custom parameter types to handle dynamic values effectively.
 * **Ensure Consistent Syntax**: Standardize the parameter handling syntax across all step definitions to improve readability and maintainability.
 
 ## Code Examples
+
+### Gherkin
 ```gherkin
 Scenario: Should find an existing customer
     Given there is a customer Sabine Mustermann # (1)
@@ -42,3 +45,38 @@ Scenario: Should find multiple customers
 ```
 
 1. The steps `Given there is a customer` and `Given there are some customers` are in different scenarios, but essentially have the same meaning. The only difference is that one gives the precondition of having a singular customer with a given name and the other provides multiple customers based on a list of given names. While linguistically different, the implementation of both steps should refer to the same, more generic, step implementation.
+
+### Step Implementation
+=== "Java"
+    ```java title="src/test/java/org/training/customer/CustomerStepDefinitions.java"
+    @Given("there is a customer")  //(1)!
+    public void thereIsACustomer(DataTable customerTable) {
+        List<List<String>> row = customerTable.asLists(String.class);
+
+        customerService.addCustomer(row.get(0).get(0), row.get(0).get(1), DEFAULT_BIRTHDAY);
+    }
+
+    @Given("there are some customers")
+    public void thereAreSomeCustomers(DataTable customerTable) {
+        List<Map<String, String>> rows = customerTable.asMaps(String.class, String.class);
+        for (Map<String, String> col : rows) {
+            customerService.addCustomer(col.get("firstname"), col.get("lastname"), DEFAULT_BIRTHDAY);
+        }
+    }
+    ```
+    1. The expressions `there is a customer` and `there are some customers` handle the singular and plural case of the same step. The share a similar logic and can therefore be merged.
+    
+=== "Python"
+    ```python title="features/steps/steps.py"
+
+    ```
+
+=== "C#"
+    ```csharp title="CucumberDiseases.Specs/StepDefinitions/CustomerStepDefinitions.cs"
+
+    ```
+
+=== "Go"
+    ```go title="customer_test.go"
+
+    ```

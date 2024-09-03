@@ -37,16 +37,16 @@ Regardless of the rating, all the impacts described are a problem. The whole pur
 ## List of all Smells
 | ID# | Name | Short Description |
 |-----|------|-------------|
-| [001](001-missing-then.md) | Missing 'Then' Implementation | A scenario lacks a `Then` step or an assertion in the step, leaving it essentially unverfied |
-| [002](001-missing-then.md) | Missing 'Then' Implementation | A scenario lacks a `Then` step or an assertion in the step, leaving it essentially unverfied |
-| [003](001-missing-then.md) | Missing 'Then' Implementation | A scenario lacks a `Then` step or an assertion in the step, leaving it essentially unverfied |
-| [004](001-missing-then.md) | Missing 'Then' Implementation | A scenario lacks a `Then` step or an assertion in the step, leaving it essentially unverfied |
-| [005](001-missing-then.md) | Missing 'Then' Implementation | A scenario lacks a `Then` step or an assertion in the step, leaving it essentially unverfied |
-| [006](001-missing-then.md) | Missing 'Then' Implementation | A scenario lacks a `Then` step or an assertion in the step, leaving it essentially unverfied |
-| [007](001-missing-then.md) | Missing 'Then' Implementation | A scenario lacks a `Then` step or an assertion in the step, leaving it essentially unverfied |
-| [008](001-missing-then.md) | Missing 'Then' Implementation | A scenario lacks a `Then` step or an assertion in the step, leaving it essentially unverfied |
-| [009](001-missing-then.md) | Missing 'Then' Implementation | A scenario lacks a `Then` step or an assertion in the step, leaving it essentially unverfied |
-| [010](001-missing-then.md) | Missing 'Then' Implementation | A scenario lacks a `Then` step or an assertion in the step, leaving it essentially unverfied |
-| [011](001-missing-then.md) | Missing 'Then' Implementation | A scenario lacks a `Then` step or an assertion in the step, leaving it essentially unverfied |
-| [012](001-missing-then.md) | Missing 'Then' Implementation | A scenario lacks a `Then` step or an assertion in the step, leaving it essentially unverfied |
-| [013](001-missing-then.md) | Missing 'Then' Implementation | A scenario lacks a `Then` step or an assertion in the step, leaving it essentially unverfied |
+| [001](001-missing-then.md) | Missing 'Then' Implementation | Gherkin scenarios lack "Then" steps (assertions). |
+| [002](002-unused-given.md) | Unused 'Given' Parameter | Parameters initialized in "Given" steps but never used. |
+| [003](003-data-collector.md) | Data Collector | Setting data incrementally across multiple "Given" steps. |
+| [004](004-redundant-mirror-image.md) | Redundant Mirror Image | Duplicate steps with different expressions but same logic. |
+| [005](005-intermediate-when-steps.md) | Intermediate When Steps | Violation of the fundamental principle of Behavior-Driven Development (BDD): One Scenario, One Behavior! |
+| [006](006-given-when-purpose-mismatch.md) | Given/When Purpose Mismatch | Misuse of Given/When steps |
+| [007](007-rotting-steps.md) | Rotting Steps | Irrelevant or empty steps cluttering scenarios. |
+| [008](008-singular-plural-logic-clones.md) | Singular-Plural Logic Clones | Duplicate steps for singular/plural cases. |
+| [009](009-dead-steps.md) | Dead Steps | Step definitions exist but are not used. |
+| [010](010-hardcoded-parameters.md) | Hardcoded Parameters | Using fixed values instead of parameters. |
+| [011](011-dependence-on-class-state.md) | Dependence on Class State | Excessive reliance on context or class state. |
+| [012](012-active-sideeffects-in-then-step.md) | Active Side Effects in Then Step | The "Then" step changes the application state by calling an action. |
+| [013](013-test-code-impurity.md) | Test Code Impurity | Business logic mixed within step definitions. |
