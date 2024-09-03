@@ -27,7 +27,7 @@ This code smell occurs when there are multiple, nearly identical implementations
 ## Code Examples
 === "Java"
     ```java title="src/test/java/org/training/customer/CustomerStepDefinitions.java"
-    @Given("there is a customer")  # (1)!
+    @Given("there is a customer")  //(1)!
     public void thereIsACustomer(DataTable customerTable) {
         List<List<String>> row = customerTable.asLists(String.class);
 
