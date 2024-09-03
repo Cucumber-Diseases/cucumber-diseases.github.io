@@ -1,4 +1,4 @@
-# 012: Test Code Impurity
+# 013: Test Code Impurity
 
 “Test Code Impurity” occurs when the step definition contains significant business logic, resulting in tightly coupled test code. In other words, the test code becomes heavily reliant on the syntax and intricacies of the system under test (SUT). This tight coupling makes the test suite challenging to maintain and less adaptable to changes in the SUT.
 
