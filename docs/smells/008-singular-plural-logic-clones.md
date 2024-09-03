@@ -17,11 +17,28 @@ This code smell occurs when there are multiple, nearly identical implementations
     The codebase becomes more complex and harder to manage with redundant implementations.
 
 
-## Your task
-
-!!! Warning "TODO"
-    describe details of exercise
-
+## Required Action
+Options to resolve a Singular-Plural Logic Clone are:
 * **Combine Step Definitions**: Merge the singular and plural step definitions into a single definition with multiple expressions and using parameterization to handle variations.
 * **Use Regular Expressions / Leverage Parameter Handling**: Consider using regular expressions or custom parameter types to handle dynamic values effectively.
 * **Ensure Consistent Syntax**: Standardize the parameter handling syntax across all step definitions to improve readability and maintainability.
+
+## Code Examples
+```gherkin
+Scenario: Should find an existing customer
+    Given there is a customer Sabine Mustermann # (1)
+    Then the customer Sabine Mustermann can be found
+
+# ...
+
+Scenario: Should find multiple customers
+    Given there are some customers # (1)
+    | firstname | lastname   |
+    | Max       | Mustermann |
+    | Sabine    | Mustermann |
+    | Horst     | Mustermann |
+    When all customers are searched
+    Then the number of customers found is 3
+```
+
+1. The steps `Given there is a customer` and `Given there are some customers` are in different scenarios, but essentially have the same meaning. The only difference is that one gives the precondition of having a singular customer with a given name and the other provides multiple customers based on a list of given names. While linguistically different, the implementation of both steps should refer to the same, more generic, step implementation.
