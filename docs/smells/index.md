@@ -38,15 +38,15 @@ Regardless of the rating, all the impacts described are a problem. The whole pur
 | ID# | Name | Short Description |
 |-----|------|-------------|
 | [001](001-missing-then.md) | Missing 'Then' Implementation | A scenario lacks a `Then` step or an assertion in the step, leaving it essentially unverfied |
-| [002](001-missing-then.md) | Missing 'Then' Implementation | A scenario lacks a `Then` step or an assertion in the step, leaving it essentially unverfied |
-| [003](001-missing-then.md) | Missing 'Then' Implementation | A scenario lacks a `Then` step or an assertion in the step, leaving it essentially unverfied |
-| [004](001-missing-then.md) | Missing 'Then' Implementation | A scenario lacks a `Then` step or an assertion in the step, leaving it essentially unverfied |
-| [005](001-missing-then.md) | Missing 'Then' Implementation | A scenario lacks a `Then` step or an assertion in the step, leaving it essentially unverfied |
-| [006](001-missing-then.md) | Missing 'Then' Implementation | A scenario lacks a `Then` step or an assertion in the step, leaving it essentially unverfied |
-| [007](001-missing-then.md) | Missing 'Then' Implementation | A scenario lacks a `Then` step or an assertion in the step, leaving it essentially unverfied |
-| [008](001-missing-then.md) | Missing 'Then' Implementation | A scenario lacks a `Then` step or an assertion in the step, leaving it essentially unverfied |
-| [009](001-missing-then.md) | Missing 'Then' Implementation | A scenario lacks a `Then` step or an assertion in the step, leaving it essentially unverfied |
-| [010](001-missing-then.md) | Missing 'Then' Implementation | A scenario lacks a `Then` step or an assertion in the step, leaving it essentially unverfied |
-| [011](001-missing-then.md) | Missing 'Then' Implementation | A scenario lacks a `Then` step or an assertion in the step, leaving it essentially unverfied |
-| [012](001-missing-then.md) | Missing 'Then' Implementation | A scenario lacks a `Then` step or an assertion in the step, leaving it essentially unverfied |
-| [013](001-missing-then.md) | Missing 'Then' Implementation | A scenario lacks a `Then` step or an assertion in the step, leaving it essentially unverfied |
+| [002](002-unused-given.md) | Missing 'Then' Implementation | A scenario lacks a `Then` step or an assertion in the step, leaving it essentially unverfied |
+| [003](003-data-collector.md) | Missing 'Then' Implementation | A scenario lacks a `Then` step or an assertion in the step, leaving it essentially unverfied |
+| [004](004-redundant-mirror-image.md) | Missing 'Then' Implementation | A scenario lacks a `Then` step or an assertion in the step, leaving it essentially unverfied |
+| [005](005-intermediate-when-steps.md) | Missing 'Then' Implementation | A scenario lacks a `Then` step or an assertion in the step, leaving it essentially unverfied |
+| [006](006-given-when-purpose-mismatch.md) | Missing 'Then' Implementation | A scenario lacks a `Then` step or an assertion in the step, leaving it essentially unverfied |
+| [007](007-rotting-steps.md) | Missing 'Then' Implementation | A scenario lacks a `Then` step or an assertion in the step, leaving it essentially unverfied |
+| [008](008-singular-plural-logic-clones.md) | Missing 'Then' Implementation | A scenario lacks a `Then` step or an assertion in the step, leaving it essentially unverfied |
+| [009](009-dead-steps.md) | Missing 'Then' Implementation | A scenario lacks a `Then` step or an assertion in the step, leaving it essentially unverfied |
+| [010](010-hardcoded-parameters.md) | Missing 'Then' Implementation | A scenario lacks a `Then` step or an assertion in the step, leaving it essentially unverfied |
+| [011](011-dependence-on-class-state.md) | Missing 'Then' Implementation | A scenario lacks a `Then` step or an assertion in the step, leaving it essentially unverfied |
+| [012](012-active-sideeffects-in-then-step.md) | Missing 'Then' Implementation | A scenario lacks a `Then` step or an assertion in the step, leaving it essentially unverfied |
+| [013](013-missing-then.md) | Missing 'Then' Implementation | A scenario lacks a `Then` step or an assertion in the step, leaving it essentially unverfied |
