@@ -66,7 +66,7 @@ nav:
     - smells/002-unused-given.md
     - smells/003-data-collector.md
     - smells/004-redundant-mirror-image.md
-    - smells/005-multiple-when-steps.md
+    - smells/005-intermediate-when-steps.md
     - smells/006-given-when-purpose-mismatch.md
     - smells/007-rotting-steps.md
     - smells/008-singular-plural-logic-clones.md
