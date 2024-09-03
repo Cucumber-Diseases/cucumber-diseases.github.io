@@ -1,6 +1,6 @@
 # 002: Unused Given Parameter
 
-This code smell occurs when a field or property is initialized within a “Given” step but remains unused throughout the scenario.
+This code smell occurs when a field or property is initialized within a `Given` step but remains unused throughout the scenario.
 Essentially, it’s like setting up a variable or resource but never actually utilizing it in subsequent steps.
 
 Possible reasons include:
