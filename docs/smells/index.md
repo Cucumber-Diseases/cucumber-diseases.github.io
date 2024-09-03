@@ -48,5 +48,5 @@ Regardless of the rating, all the impacts described are a problem. The whole pur
 | [009](009-dead-steps.md) | Dead Steps | Step definitions exist but are not used. |
 | [010](010-hardcoded-parameters.md) | Hardcoded Parameters | Using fixed values instead of parameters. |
 | [011](011-dependence-on-class-state.md) | Dependence on Class State | Excessive reliance on context or class state. |
-| [012](012-active-sideeffects-in-then-step.md) | Active Sideeffects in Then Step | ... |
+| [012](012-active-sideeffects-in-then-step.md) | Active Side Effects in Then Step | The "Then" step changes the application state by calling an action. |
 | [013](013-test-code-impurity.md) | Test Code Impurity | Business logic mixed within step definitions. |
