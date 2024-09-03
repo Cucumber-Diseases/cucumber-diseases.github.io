@@ -1,10 +1,12 @@
-# 005: Multiple When Steps
+# 005: Intermediate When Steps
 
-The *Multiple When Steps* code smell violates the fundamental principle of Behavior-Driven Development (BDD): **One Scenario, One Behavior!**
+The *Intermediate When Steps* (also called "When/Then Mismatch) code smell violates the fundamental principle of Behavior-Driven Development (BDD): **One Scenario, One Behavior!**
 
-When a scenario contains multiple `When` steps, it indicates an issue within the scope or the purpose of your test case. Are you using "Multiple When Steps" to store multiple results? This leads to unclear and suspicious assertions in the `Then` step.
+When a scenario contains multiple `When` steps, it indicates an issue within the scope or the purpose of your test case. Are you using "Intermediate When Steps" to store multiple results? This leads to unclear and suspicious assertions in the `Then` step.
 
-If you encounter this smell, the `When` step is misused in order to execute or prepare a functionality that is not directly under test by the scenario for it's side effects. Very often this is to prepare some condition required by the verification in the following `Then` steps. Thus, it is very strongly related to [Given/When Purpose Mismatch](/smells/006-given-when-purpose-mismatch).
+If you encounter this smell, the `When` step is misused in order to execute or prepare a functionality that is not directly under test by the scenario for it's side effects. Very often this is to prepare some condition required by the verification in the following `Then` steps.
+
+It is very strongly related to [Given/When Purpose Mismatch](/smells/006-given-when-purpose-mismatch). The significant difference is that this smell executes an action that is relevant for the `Then` step while the "Given/When Purpose Mismatch" executes something as a `When` as preparation for another `When` step step that should be part of a `Given` step.
 
 ## Impact:
 
@@ -20,7 +22,7 @@ If you encounter this smell, the `When` step is misused in order to execute or p
 ## Required Action
 Look for scenarios that have more than one `When` (or `When ... And ...`) steps and inspect them for what they are trying to achieve. There are three common ways to resolve this situation:
 
-1. **Merge Steps**: In the case of multiple "When" steps the most obvious solutin could be merging the implementation into something new. Consider also merging or replacing multiple "When" steps with a  "Then" step. This happens if you storing multiple results or there is something suspicious in your assertion.
+1. **Merge Steps**: In the case of multiple "When" steps the most obvious solution could be merging the implementation into something new. Consider also merging or replacing multiple "When" steps with a  "Then" step. This happens if you storing multiple results or there is something suspicious in your assertion.
 2. **Rearrange Steps**: This is similar to merging steps. Ask your self, which steps are describing the action and which of them are preparing or asserting the scenarios.
 3. **Isolate Behaviors:** Create separate scenarios for each distinct behavior.
 

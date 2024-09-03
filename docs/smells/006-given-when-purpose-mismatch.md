@@ -1,6 +1,6 @@
 # 006: Given/When Purpose Mismatch
 
-The "Given/When Purpose Mismatch" occurs when the roles of `Given` and `When` steps are confused or misused in a Gherkin scenario. It happens when the Given step is intended to set up test data, while the `When` step is meant to test a function that creates something. In a proper setup (`Given`), the focus should be on preparing the necessary context or state, without concern for validation or correctness. However, the implementation of these steps may be similar or identical, leading to confusion.
+The *Given/When Purpose Mismatch* occurs when the roles of `Given` and `When` steps are confused or misused in a Gherkin scenario. It happens when the Given step is intended to set up test data, while the `When` step is meant to test a function that creates something. In a proper setup (`Given`), the focus should be on preparing the necessary context or state, without concern for validation or correctness. However, the implementation of these steps may be similar or identical, leading to confusion.
 
 ## Impact
 
@@ -27,4 +27,14 @@ When you identify a `Given/When Purpose Mismatch` in the scenarios, there are mu
 Depending on the exact situation different actions may be appropriate.
 
 ## Code Examples
-tbd
+=== "Gherkin"
+   ```gherkin title="Customer.feature"
+    Scenario: Should be able to create two customer with different names
+      Given the customer name is Max Mustermann
+      Given the second customer is Sabine Mustermann
+      When the customer is created # (1)
+      When the second customer is created
+      Then the second customer can be found
+    ```
+
+    1. In this case the creation of the first customer is only executed as a `When` step in order to then execute the creation of the second customer. The actual behaviour under test is the creation of the second customer. A possible solution here would be to create a `Then` step that includes the creation of the first customer.

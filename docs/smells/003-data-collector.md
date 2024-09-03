@@ -22,19 +22,13 @@ Replace multiple `Given` steps with a single step that passes the entire data ob
 
 ## Code Examples
 
-=== "Before"
+=== "Gherkin"
     ```gherkin title="Customer.feature"
         Scenario: Should successfully create new customer
-        Given the customer first name is "Max"
-        And the customer last name is "Mustermann"
+        Given the customer first name is "Max" # (1)
+        And the customer last name is "Mustermann" # (1)
         When the customer is created
         Then the customer creation should be successful
     ```
 
-=== "After"
-    ```gherkin title="Customer.feature"
-        Scenario: Should successfully create new customer
-        Given the customer name is Max Mustermann
-        When the customer is created
-        Then the customer creation should be successful
-    ```
+    1. 
