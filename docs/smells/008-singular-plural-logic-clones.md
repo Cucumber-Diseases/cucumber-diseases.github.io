@@ -25,9 +25,9 @@ This code smell occurs when there are multiple, nearly identical implementations
 
 
 ## Code Examples
-
-```gherkin title="Java"
-    @Given("there is a customer")
+=== "Java"
+    ```java title="src/test/java/org/training/customer/CustomerStepDefinitions.java"
+    @Given("there is a customer")  # (1)!
     public void thereIsACustomer(DataTable customerTable) {
         List<List<String>> row = customerTable.asLists(String.class);
 
@@ -41,4 +41,20 @@ This code smell occurs when there are multiple, nearly identical implementations
             customerService.addCustomer(col.get("firstname"), col.get("lastname"), DEFAULT_BIRTHDAY);
         }
     }
-```
+    ```
+    1. The expressions `there is a customer` and `there are some customers` handle the singular and plural case of the same step. The share a similar logic and can therefore be merged.
+    
+=== "Python"
+    ```python title="features/steps/steps.py"
+
+    ```
+
+=== "C#"
+    ```csharp title="CucumberDiseases.Specs/StepDefinitions/CustomerStepDefinitions.cs"
+
+    ```
+
+=== "Go"
+    ```go title="customer_test.go"
+
+    ```
