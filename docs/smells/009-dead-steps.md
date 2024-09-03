@@ -41,9 +41,17 @@ In your daily business periodically review your step definitions and remove unus
 
 === "C#"
     ```csharp title="CucumberDiseases.Specs/StepDefinitions/CustomerStepDefinitions.cs"
+    [Given("there are no customers")]
+    public void GivenThereAreNoCustomers()
+    {
+    }
 
+    [Given("are no customers")]//(1)!
+    public void GivenNoCustomersExists()
+    {
+    }
     ```
-
+    1. The steps `there are no customers` and `are no customers` have a similar meaning. Only one step is used by the scenarios in the `Customer.feature`. It seems that somebody created a new step instead of reusing the existing.
 === "Go"
     ```go title="customer_test.go"
 
