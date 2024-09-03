@@ -18,6 +18,8 @@ This code smell occurs when there are multiple, nearly identical implementations
 
 
 ## Required Action
+When you identify a `Singular-Plural Logic Clones` in your scenario, there are multiple ways to resolve them:
+
 * **Combine Step Definitions**: Merge the singular and plural step definitions into a single definition with multiple expressions and using parameterization to handle variations.
 * **Use Regular Expressions / Leverage Parameter Handling**: Consider using regular expressions or custom parameter types to handle dynamic values effectively.
 * **Ensure Consistent Syntax**: Standardize the parameter handling syntax across all step definitions to improve readability and maintainability.
