@@ -28,8 +28,9 @@ When you identify a `Singular-Plural Logic Clones` in your scenario, there are m
 
 ### Gherkin
 ```gherkin
+# (1)!
 Scenario: Should find an existing customer
-    Given there is a customer # (1)
+    Given there is a customer 
         | Sabine | Mustermann |
     Then the customer Sabine Mustermann can be found
 
@@ -50,7 +51,7 @@ Scenario: Should find multiple customers
 ### Step Implementation
 === "Java"
     ```java title="src/test/java/org/training/customer/CustomerStepDefinitions.java"
-    @Given("there is a customer")  //(1)!
+    @Given("there is a customer")  // (1)!
     public void thereIsACustomer(DataTable customerTable) {
         List<List<String>> row = customerTable.asLists(String.class);
 
@@ -65,6 +66,7 @@ Scenario: Should find multiple customers
         }
     }
     ```
+
     1. The expressions `there is a customer` and `there are some customers` handle the singular and plural case of the same step. The share a similar logic and can therefore be merged.
     
 === "Python"
@@ -81,6 +83,7 @@ Scenario: Should find multiple customers
     ```go title="customer_test.go"
     func InitializeScenario(sc *godog.ScenarioContext) {
         // ...
+        // (1)!
         sc.Given(`there is a customer`, t.thereIsACustomer)
 	    sc.Given(`there are some customers`, t.thereAreSomeCustomers)
         // ...
@@ -102,3 +105,5 @@ Scenario: Should find multiple customers
         return nil
     }
     ```
+
+    1. The functions `thereIsACustomer` and `thereAreSomeCustomers` handle the singular and plural case of the same step. The share a similar logic and can therefore be merged.
