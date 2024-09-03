@@ -19,7 +19,7 @@ All Cucumber smells are described in the same layout to make it easier for you t
 
 * Start with a description of the smell
 * *Impact:* Describe the impact if present in your tests
-* *You Task*: Tell you what you need to do in order to remove them.
+* *Required Action*: Tell you what you need to do and lists different alternative solutions in order to remove them.
 * *Code Samples*: Examples in some programming languages to show you how it looks in the wild.
 
 ## Rating of Impacts
@@ -38,3 +38,15 @@ Regardless of the rating, all the impacts described are a problem. The whole pur
 | ID# | Name | Short Description |
 |-----|------|-------------|
 | [001](001-missing-then.md) | Missing 'Then' Implementation | A scenario lacks a `Then` step or an assertion in the step, leaving it essentially unverfied |
+| [002](001-missing-then.md) | Missing 'Then' Implementation | A scenario lacks a `Then` step or an assertion in the step, leaving it essentially unverfied |
+| [003](001-missing-then.md) | Missing 'Then' Implementation | A scenario lacks a `Then` step or an assertion in the step, leaving it essentially unverfied |
+| [004](001-missing-then.md) | Missing 'Then' Implementation | A scenario lacks a `Then` step or an assertion in the step, leaving it essentially unverfied |
+| [005](001-missing-then.md) | Missing 'Then' Implementation | A scenario lacks a `Then` step or an assertion in the step, leaving it essentially unverfied |
+| [006](001-missing-then.md) | Missing 'Then' Implementation | A scenario lacks a `Then` step or an assertion in the step, leaving it essentially unverfied |
+| [007](001-missing-then.md) | Missing 'Then' Implementation | A scenario lacks a `Then` step or an assertion in the step, leaving it essentially unverfied |
+| [008](001-missing-then.md) | Missing 'Then' Implementation | A scenario lacks a `Then` step or an assertion in the step, leaving it essentially unverfied |
+| [009](001-missing-then.md) | Missing 'Then' Implementation | A scenario lacks a `Then` step or an assertion in the step, leaving it essentially unverfied |
+| [010](001-missing-then.md) | Missing 'Then' Implementation | A scenario lacks a `Then` step or an assertion in the step, leaving it essentially unverfied |
+| [011](001-missing-then.md) | Missing 'Then' Implementation | A scenario lacks a `Then` step or an assertion in the step, leaving it essentially unverfied |
+| [012](001-missing-then.md) | Missing 'Then' Implementation | A scenario lacks a `Then` step or an assertion in the step, leaving it essentially unverfied |
+| [013](001-missing-then.md) | Missing 'Then' Implementation | A scenario lacks a `Then` step or an assertion in the step, leaving it essentially unverfied |
