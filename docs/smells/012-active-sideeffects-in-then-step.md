@@ -1,32 +1,33 @@
 # 012: Active Sideeffects in Then Step
-This code smell, known as “Active Sideeffects in Then Step,” manifests when we invoke functions within our application from a Then step in our Cucumber scenario. These functions modify the internal state of the application, such as creating or altering data. However, this practice misaligns with the intended purpose of the Then step, which primarily focuses on asserting outcomes based on the actions performed in the preceding Given and When steps.
-
+The "Active Side Effects in Then Step" occurs when a Then step, which should be used exclusively for verifying outcomes, is incorrectly used to perform actions that modify the application's internal state, such as creating or altering data. This is a case of misaligned purpose, where operations meant for Given (for setup) or When (for executing actions) steps are mistakenly placed in the Then step. The Then step is intended solely for assertions and validation, ensuring that the application behaves as expected based on the actions performed. Introducing state changes in this step confuses the purpose of the test and can lead to unreliable or misleading results.
 
 ## Impact
 The presence of this smell can lead to several problems and risks:
 
-!!! failure "Unreadable and unclear Code"
-    Code becomes harder to understand due to mixed responsibilities within the Then step.
-    Developers may struggle to differentiate between verification logic and data manipulation.
+!!! failure "Unreadable Code"
+    The scenario becomes harder to read and understand because the distinction between setting up, acting, and verifying is blurred. This can make it difficult to discern the intent behind each step and what is being tested.
 
 !!! failure "Harder Maintenance"
-    When data preparation occurs in the Then step, any changes to the data creation process require modifying multiple places.
-    This increases maintenance effort and the likelihood of introducing errors.
-
-!!! failure "Increased Complexity"
-    Direct function calls in the Then step tightly couple verification logic with data setup.
-    The complexity of the step grows, making it challenging to reason about the scenario. Further you might need to consider cleanup procedures even though you would expect it here.
+    Tests that include state changes in Then steps are more difficult to maintain. Since `Then` steps are expected to be idempotent (i.e., not change the system's state), including state-altering actions here can lead to fragile tests that are sensitive to changes in the application's logic or structure.
 
 !!! failure "Harder Analysis"
-    When a step fails it becomes harder to analyse because of the active side effects in the application.
+    Mixing state changes with assertions in `Then steps diminishes the clarity of the test, making it unclear what the expected outcome is supposed to validate, as the line between action and validation is crossed. This makes it harder to analyse when your scenarios are failing. 
+
+!!! failure "Increased Complexity and indirect Coupling"
+    Introducing side effects in `Then` steps lead to tighter coupling between tests and the underlying code, increasing the complexity and interdependencies between steps. This makes the test suite more brittle and less modular. Further you might need to consider cleanup procedures even though you would expect it here.
 
 ## Required Action
 
-* **Separate Concerns**: Clarify if the side effect the purpose of the side effect. If it's data preparation (e.g., creating test data), move it  to the `Given` step. Otherwies it could be a result of the `When` step, then move it there and retrieve the result in the `Then`step. Reserve the `Then` step exclusively for verification and assertions.
+* **Separate Concerns**: Ensure that any action that changes the state of the application is placed in the appropriate Given or When step. Given should handle all setup and preconditions, while When should execute the actions that the scenario is testing.
 * **Use Background Steps**: Utilize the `Background` section to set up common data or preconditions shared across multiple scenarios. Keep the `Then` step focused on verifying outcomes without introducing side effects.
-* **Custom Step Definitions**: Create custom step definitions for specific data setup tasks. These custom steps can encapsulate data creation, making the scenario more modular and readable.
 
 Remember that adhering to the intended purpose of each step (`Given`, `When`, `Then`) promotes cleaner, more maintainable Gherkin scenarios and reduces the risk of introducing Cucumber diseases like this one. 😊
+
+## Prevention Actions
+
+* **Refactor the Then Steps**: If you find state-altering code within a Then step, refactor it by moving those actions to a Given or When step, depending on where it logically belongs. Then steps should be refocused on assertions that check the results of actions performed in the When step.
+* **Review Scenarios for Alignment**: Regularly review your scenarios to ensure that each step is aligned with its intended purpose. Given sets up the context, When performs the actions, and Then verifies the outcomes. This alignment helps maintain clear and understandable tests.
+* **Use Mocks or Stubs**: If the Then step is intended to validate interactions without causing side effects, consider using mocks or stubs. This approach allows you to simulate the interaction without actually changing the application's state, keeping your Then steps focused on validation.
 
 ## Code Examples
 To understand this smell, please refer to the Gherkin code as well as the code in the implementation in one of the programming languages. It makes the most sense if the scenarios and the implementation are both read together.
