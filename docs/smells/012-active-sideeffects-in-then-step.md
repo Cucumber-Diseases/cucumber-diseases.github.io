@@ -42,7 +42,8 @@ To understand this smell, please refer to the Gherkin code as well as the code i
         var customer = customerService.searchCustomer(secondFirstName, secondLastName);
 
         Assertions.assertThat(customer.firstName).isEqualTo(secondFirstName);
-        Assertions.assertThat(customer.lastName).isEqualTo(secondLastName);}
+        Assertions.assertThat(customer.lastName).isEqualTo(secondLastName);
+    }
     ```
 
     1. Creating the customer in the `Then` step is an active side effect. Since we are checking exactly this data, we should move it to a appropiate `When` impelementation. 
