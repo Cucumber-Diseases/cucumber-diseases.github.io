@@ -27,12 +27,13 @@ Look for scenarios that have more than one `When` (or `When ... And ...`) steps 
 3. **Isolate Behaviors:** Create separate scenarios for each distinct behavior.
 
 ## Code Examples
-```gherkin title="Customer.feature"
+### Gherkin
+```gherkin
 Scenario: Should find newly created customer
     Given the customer name is Rose Smith
     When the customer is created
     And all customers are searched
+# (1)!
     Then the number of customers found is 1
 ```
-
-Note the `When ... And ...` composition of the scenario. In this case the author is misusing `And all customers are searched` as a `When` clause, even though it is not the functionality under test. Instead, searching all customers is part of the verification and assertion of the `Then` step. A viable solution would be to introduce a `Then` step that represents `search and check the returned number of customers`.
+1. Note the `When ... And ...` composition of the scenario. In this case the author is misusing `And all customers are searched` as a `When` clause, even though it is not the functionality under test. Instead, searching all customers is part of the verification and assertion of the `Then` step. A viable solution would be to introduce a `Then` step that represents `search and check the returned number of customers`.
