@@ -1,7 +1,11 @@
 # 012: Active Sideeffects in Then Step
-tbd
+!!! warning "TODO"
 
+## Impact
 
+!!! warning "TODO"
+## Required Action
+!!! warning "TODO"
 
 
 ## Code Examples
