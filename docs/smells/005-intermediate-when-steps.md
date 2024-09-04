@@ -27,6 +27,7 @@ Look for scenarios that have more than one `When` (or `When ... And ...`) steps 
 3. **Isolate Behaviors:** Create separate scenarios for each distinct behavior.
 
 ## Code Examples
+### Gherkin
 ```gherkin title="Customer.feature"
 Scenario: Should find newly created customer
     Given the customer name is Rose Smith
