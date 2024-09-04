@@ -36,4 +36,5 @@ Scenario: Should find newly created customer
 # (1)!
     Then the number of customers found is 1
 ```
+
 1. Note the `When ... And ...` composition of the scenario. In this case the author is misusing `And all customers are searched` as a `When` clause, even though it is not the functionality under test. Instead, searching all customers is part of the verification and assertion of the `Then` step. A viable solution would be to introduce a `Then` step that represents `search and check the returned number of customers`.
