@@ -15,7 +15,7 @@ This code smell occurs when everything is stored either in a context or in the f
 !!! warning "Increased Coupling"
     Tests become tightly coupled to the system's state, making them less reusable and more prone to breaking. Further they become less reliable if the state of the application is not properly managed or controlled.
 
-## Your task
+## Required Action
 
 !!! warning "TODO"
     describe details of exercise
@@ -24,3 +24,47 @@ This code smell occurs when everything is stored either in a context or in the f
 * **Avoid Premature Data Gathering**: Gather data only when needed. If data can be collected later in the scenario, defer its retrieval to a later step and pass it to the subsequent steps as necessary.
 * **Reuse Application State**: Don't hold data twice in your application and in your test classes. Prefer the usage of test data in your application state for example a database instead of temporary storage in your objects.
 * **Use Scenario Context Sparingly**: While scenario context can be useful, avoid overusing it. Limit the amount of data stored in the context to essential information. Consider whether a step really needs access to the entire context or if a smaller subset suffices.
+
+## Code Examples
+!!! warning "TODO"
+To understand this smell, please refer to the Gherkin code as well as the code in the implementation in one of the programming languages. It makes the most sense if the scenarios and the implementation are both read together.
+
+### Gherkin
+```gherkin title="Customer.feature"
+
+# (1)!
+Scenario: ...
+
+```
+
+1. Notes ...
+
+### Step Implementation
+=== "Java"
+    ```java title="CustomerStepDefinitions.java"
+    ...
+    ```
+
+    1. The expressions `there is a customer` and `there are some customers` handle the singular and plural case of the same step. The share a similar logic and can therefore be merged.
+    
+=== "Python"
+    ```python title="features/steps/steps.py"
+    ...
+    ```
+
+    1. The expressions `there is a customer` and `there are some customers` handle the singular and plural case of the same step. The share a similar logic and can therefore be merged.
+
+
+=== "C#"
+    ```csharp title="CucumberDiseases.Specs/StepDefinitions/CustomerStepDefinitions.cs"
+    ...
+    ```
+
+    1. The expressions `there is a customer` and `there are some customers` handle the singular and plural case of the same step. The share a similar logic and can therefore be merged.
+
+=== "Go"
+    ```go title="customer_test.go"
+    ...
+    ```
+
+    1. The functions `thereIsACustomer` and `thereAreSomeCustomers` handle the singular and plural case of the same step. The share a similar logic and can therefore be merged.

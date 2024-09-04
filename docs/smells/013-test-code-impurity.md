@@ -19,11 +19,57 @@
 !!! warning "Limited Reusability"
     Tests become less reusable as they are tightly coupled to the system's implementation.
 
-## Your task
+This code smell occurs when everything is stored either in a context or in the fields of your step implementation. Often, this state is even duplicated because we prepared the state of the application previously. This can lead to tightly coupled tests that are difficult to maintain and understand.
+
+## Required Action
 
 !!! warning "TODO"
     describe details of exercise
 
+
 * Separation of Concerns: Extract business logic from step definitions. Keep the test code focused on expressing the intended behavior without diving into implementation details. Create separate utility methods or helper classes to encapsulate business rules.
 * Leverage Page Objects: Use page objects to encapsulate interactions with the UI, reducing the amount of business logic in step definitions.
 * Dependency Inversion: Introduce a test design where the test implementation defines interfaces to be fulfilled by utilities or drivers. By applying the principles of dependency inversion, you enable easy exchange of the test object (e.g., REST service instead of UI) while maintaining a clean separation between test code and SUT.
+
+## Code Examples
+To understand this smell, please refer to the Gherkin code as well as the code in the implementation in one of the programming languages. It makes the most sense if the scenarios and the implementation are both read together.
+
+### Gherkin
+```gherkin title="Customer.feature"
+
+# (1)!
+Scenario: ...
+
+```
+
+1. Notes ...
+
+### Step Implementation
+=== "Java"
+    ```java title="CustomerStepDefinitions.java"
+    ...
+    ```
+
+    1. The expressions `there is a customer` and `there are some customers` handle the singular and plural case of the same step. The share a similar logic and can therefore be merged.
+    
+=== "Python"
+    ```python title="features/steps/steps.py"
+    ...
+    ```
+
+    1. The expressions `there is a customer` and `there are some customers` handle the singular and plural case of the same step. The share a similar logic and can therefore be merged.
+
+
+=== "C#"
+    ```csharp title="CucumberDiseases.Specs/StepDefinitions/CustomerStepDefinitions.cs"
+    ...
+    ```
+
+    1. The expressions `there is a customer` and `there are some customers` handle the singular and plural case of the same step. The share a similar logic and can therefore be merged.
+
+=== "Go"
+    ```go title="customer_test.go"
+    ...
+    ```
+
+    1. The functions `thereIsACustomer` and `thereAreSomeCustomers` handle the singular and plural case of the same step. The share a similar logic and can therefore be merged.
