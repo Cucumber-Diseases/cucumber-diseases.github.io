@@ -27,7 +27,7 @@ When you identify a `Given/When Purpose Mismatch` in the scenarios, there are mu
 Depending on the exact situation different actions may be appropriate.
 
 ## Code Examples
-=== "Gherkin"
+### Gherkin
 ```gherkin title="Customer.feature"
 Scenario: Should be able to create two customer with different names
    Given the customer name is Max Mustermann
