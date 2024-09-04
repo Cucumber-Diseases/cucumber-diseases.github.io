@@ -33,4 +33,5 @@ Scenario: Should find newly created customer
     When the customer is created
     Then the customer can be found
 ```
+
 1. The step `Given there are no customers` does not add any value as this is the default condition for a scenario. It is verbose expressiveness without adding function or value to the step.
