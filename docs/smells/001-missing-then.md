@@ -27,43 +27,36 @@ Decide which criteria apply and select the step depending on your answers:
 ## Code Examples
 === "Java"
     ```java title="CustomerStepDefinitons.java"
-    // ...
     @Then("the customer creation should be successful")
     public void theCustomerCreationShouldBeSuccessful() {
        //(1)!
     }
-    // ...
     ```
 
     1. Note that the step `Then the customer creation should be successful` contains no code. It should contain a `assert`-Statement.
 
 === "Python"
     ```python title="features/steps/steps.py"
-    # ...
     @then(u'the customer creation should be successful')
     def step_impl(context):
         pass #(1)!
-    # ...
     ```
 
     1. Note that the step `Then the customer creation should be successful` contains no code. It should contain a `assert`-Statement.
 
 === "C#"
     ```csharp title="CucumberDiseases.Specs/StepDefinitions/CustomerStepDefinitions.cs"
-    // ...
     [Then("the customer creation should be successful")]
     public void ThenTheCustomerCreationShouldBeSuccessful()
     {
         //(1)!
     }
-    // ...
     ```
 
     1. Note that the step `Then the customer creation should be successful` contains no code. It should contain a `assert`-Statement.
 
 === "Go"
     ```go
-    // ...
     func (t *CustomerTestSteps) theCustomerCreationShouldBeSuccessful(ctx context.Context) error {
         return nil //(1)!
     }
