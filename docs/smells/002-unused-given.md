@@ -26,16 +26,13 @@ Search your code for any field/property which is initialized by a step but never
 * **Use It**: If the parameter has a valid role, ensure it’s utilized appropriately.
 
 ## Code Examples
-
-=== "Gherkin"
-    ```gherkin title="Customer.feature"
-        Scenario: Should successfully create new customer
-        Given the customer first name is "Max"
-        And the customer last name is "Mustermann"
-        And the customer's birthday is 2000/03/19  # (1)
-        When the customer is created
-        Then the customer creation should be successful
-    ```
-
-
-    1. Mind that `birthday` is set but not checked in the `Then` steps. The `birthday` is also not evaluated in any hidden assertions within the `Then the customer creation should be successful` step.
+### Gherkin
+```gherkin title="Customer.feature"
+Scenario: Should successfully create new customer
+   Given the customer first name is "Max"
+   And the customer last name is "Mustermann"
+   And the customer's birthday is 2000/03/19  # (1)!
+   When the customer is created
+   Then the customer creation should be successful
+```
+1. Mind that `birthday` is set but not checked in the `Then` steps. The `birthday` is also not evaluated in any hidden assertions within the `Then the customer creation should be successful` step.
