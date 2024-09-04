@@ -27,5 +27,50 @@ the date of `1970-01-01 should be a parameter in the step definition and not har
 * Reuse Existing Steps: If a parameterized version exists, ensure consistent usage.
 * Merge similar scenarios to a 'Scenario Outline'
 
-## Code Exmaples
-tbd
+## Code Examples
+=== "Java"
+    ```java title="src/test/java/org/training/customer/CustomerStepDefinitions.java"
+    @When("the customer Sabine Mustermann is searched") // (1)!
+    public void theCustomerSabineMustermannIsSearched()
+    {
+        _count = _customerService.FindCustomers("Sabine", "Mustermann").Count;
+    }
+
+    @When("the customer Rose Smith is searched")
+    public void theCustomerRoseSmithIsSearched()
+    {
+        _count = _customerService.FindCustomers("Rose", "Smith").Count;
+    }
+    ```
+
+    1. The expression of the two steps is completely the same except the fixed values for the name. The name can be extracted to a parameter and the implementation can be merged easily.
+=== "Python"
+    ```python title="features/steps/steps.py"
+   
+    ```
+
+    1. The expression of the two steps is completely the same except the fixed values for the name. The name can be extracted to a parameter and the implementation can be merged easily.
+
+=== "C#"
+    ```csharp title="CucumberDiseases.Specs/StepDefinitions/CustomerStepDefinitions.cs"
+    [When("the customer Sabine Mustermann is searched")] // (1)!
+    public void WhenTheCustomerSabineMustermannIsSearched()
+    {
+        _count = _customerService.FindCustomers("Sabine", "Mustermann").Count;
+    }
+
+    [When("the customer Rose Smith is searched")]
+    public void WhenTheCustomerRoseSmithIsSearched()
+    {
+        _count = _customerService.FindCustomers("Rose", "Smith").Count;
+    }
+    ```
+    
+    1. The expression of the two steps is completely the same except the fixed values for the name. The name can be extracted to a parameter and the implementation can be merged easily.
+
+=== "Go"
+    ```go title="customer_test.go"
+
+    ```
+
+    1. The expression of the two steps is completely the same except the fixed values for the name. The name can be extracted to a parameter and the implementation can be merged easily.
