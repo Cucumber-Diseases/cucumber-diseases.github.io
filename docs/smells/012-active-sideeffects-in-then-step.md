@@ -31,42 +31,46 @@ Remember that adhering to the intended purpose of each step (`Given`, `When`, `T
 ## Code Examples
 To understand this smell, please refer to the Gherkin code as well as the code in the implementation in one of the programming languages. It makes the most sense if the scenarios and the implementation are both read together.
 
-### Gherkin
-```gherkin title="Customer.feature"
-
-# (1)!
-Scenario: ...
-
-```
-
-1. Notes ...
 
 ### Step Implementation
 === "Java"
     ```java title="CustomerStepDefinitions.java"
-    ...
+    @Then("the second customer can be found")
+    public void theSecondCustomerCanBeFound() {
+        customerService.addCustomer(secondFirstName, secondLastName, DEFAULT_BIRTHDAY); // (1)!
+        var customer = customerService.searchCustomer(secondFirstName, secondLastName);
+
+        Assertions.assertThat(customer.firstName).isEqualTo(secondFirstName);
+        Assertions.assertThat(customer.lastName).isEqualTo(secondLastName);}
     ```
 
-    1. The expressions `there is a customer` and `there are some customers` handle the singular and plural case of the same step. The share a similar logic and can therefore be merged.
+    1. Creating the customer in the `Then` step is an active side effect. Since we are checking exactly this data, we should move it to a appropiate `When` impelementation. 
     
 === "Python"
     ```python title="features/steps/steps.py"
     ...
     ```
 
-    1. The expressions `there is a customer` and `there are some customers` handle the singular and plural case of the same step. The share a similar logic and can therefore be merged.
+    1. Creating the customer in the `Then` step is an active side effect. Since we are checking exactly this data, we should move it to a appropiate `When` impelementation. 
 
 
 === "C#"
-    ```csharp title="CucumberDiseases.Specs/StepDefinitions/CustomerStepDefinitions.cs"
-    ...
+    ```csharp title="CustomerStepDefinitions.cs"
+    [Then("the second customer can be found")]
+    public void ThenTheSecondCustomerCanBeFound()
+    {
+        _customerService.AddCustomer(_secondFirstName, _secondLastName, DefaultBirthday); // (1)!
+        var customer = _customerService.FindCustomer(_secondFirstName, _secondLastName);
+
+        customer.Should().BeEquivalentTo(new { FirstName = _secondFirstName, LastName = _secondLastName });
+    }
     ```
 
-    1. The expressions `there is a customer` and `there are some customers` handle the singular and plural case of the same step. The share a similar logic and can therefore be merged.
+    1. Creating the customer in the `Then` step is an active side effect. Since we are checking exactly this data, we should move it to a appropiate `When` impelementation. 
 
 === "Go"
     ```go title="customer_test.go"
     ...
     ```
 
-    1. The functions `thereIsACustomer` and `thereAreSomeCustomers` handle the singular and plural case of the same step. The share a similar logic and can therefore be merged.
+    1. Creating the customer in the `Then` step is an active side effect. Since we are checking exactly this data, we should move it to a appropiate `When` impelementation. 

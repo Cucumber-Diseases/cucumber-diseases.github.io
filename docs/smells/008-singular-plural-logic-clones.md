@@ -52,7 +52,7 @@ Scenario: Should find multiple customers
 
 ### Step Implementation
 === "Java"
-    ```java title="src/test/java/org/training/customer/CustomerStepDefinitions.java"
+    ```java title="CustomerStepDefinitions.java"
     @Given("there is a customer")  // (1)!
     public void thereIsACustomer(DataTable customerTable) {
         List<List<String>> row = customerTable.asLists(String.class);
@@ -89,7 +89,7 @@ Scenario: Should find multiple customers
 
 
 === "C#"
-    ```csharp title="CucumberDiseases.Specs/StepDefinitions/CustomerStepDefinitions.cs"
+    ```csharp title="CustomerStepDefinitions.cs"
     [Given("there is a customer")] // (1)!
     public void GivenThereIsACustomer(Table customerTable)
     {
