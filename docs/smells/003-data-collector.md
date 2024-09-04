@@ -23,7 +23,8 @@ Replace multiple `Given` steps with a single step that passes the entire data ob
 ## Code Examples
 
 ### Gherkin
-```gherkin
+```gherkin title="Customer.feature"
+
 Scenario: Should successfully create new customer
     Given the customer first name is "Max"
     And the customer last name is "Mustermann"

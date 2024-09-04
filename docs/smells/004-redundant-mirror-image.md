@@ -18,7 +18,7 @@ If you find such steps, consider consolidating them by using multiple expression
 ## Code Examples
 
 === "Java"
-    ```java title="src/test/java/org/training/customer/CustomerStepDefinitions.java"
+    ```java title="CustomerStepDefinitions.java"
     @When("the customer is created") // (1)!
     public void theCustomerIsCreated() {
         try {
@@ -60,7 +60,7 @@ If you find such steps, consider consolidating them by using multiple expression
     1. `the customer is created` contains the same implementation as `an invalid customer is created`. It is the logical opposite, but does the same thing, just that we expect it to throw a `ValueError` in one case and have `context.error` be `None` in the other. The only real difference comes from the subsequent `Then` step that makes a distinction in the verification.
 
 === "C#"
-    ```csharp title="CucumberDiseases.Specs/StepDefinitions/CustomerStepDefinitions.cs"
+    ```csharp title="CustomerStepDefinitions.cs"
     [When("the customer is created")]
     public void WhenTheCustomerIsCreated() // (1)!
     {

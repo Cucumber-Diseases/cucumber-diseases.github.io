@@ -45,7 +45,7 @@ Decide which criteria apply and select the step depending on your answers:
     1. Note that the step `Then the customer creation should be successful` contains no code. It should contain a `assert`-Statement.
 
 === "C#"
-    ```csharp title="CucumberDiseases.Specs/StepDefinitions/CustomerStepDefinitions.cs"
+    ```csharp title="StepDefinitions/CustomerStepDefinitions.cs"
     [Then("the customer creation should be successful")]
     public void ThenTheCustomerCreationShouldBeSuccessful()
     {

@@ -30,7 +30,7 @@ the date of `1970-01-01` should be a parameter in the step definition and not ha
 
 ## Code Examples
 === "Java"
-    ```java title="src/test/java/org/training/customer/CustomerStepDefinitions.java"
+    ```java title="CustomerStepDefinitions.java"
     @When("the customer Sabine Mustermann is searched") // (1)!
     public void theCustomerSabineMustermannIsSearched()
     {
@@ -47,13 +47,15 @@ the date of `1970-01-01` should be a parameter in the step definition and not ha
     1. The expression of the two steps is completely the same except the fixed values for the name. The name can be extracted to a parameter and the implementation can be merged easily.
 === "Python"
     ```python title="features/steps/steps.py"
-   
+    @when(u'the customer Sabine Mustermann is searched')
+    def step_impl(context):
+       context.count = len(context.service.search_customers("Sabine", "Mustermann"))   
     ```
 
     1. The expression of the two steps is completely the same except the fixed values for the name. The name can be extracted to a parameter and the implementation can be merged easily.
 
 === "C#"
-    ```csharp title="CucumberDiseases.Specs/StepDefinitions/CustomerStepDefinitions.cs"
+    ```csharp title="CustomerStepDefinitions.cs"
     [When("the customer Sabine Mustermann is searched")] // (1)!
     public void WhenTheCustomerSabineMustermannIsSearched()
     {
@@ -71,6 +73,10 @@ the date of `1970-01-01` should be a parameter in the step definition and not ha
 
 === "Go"
     ```go title="customer_test.go"
+    func (t *CustomerTestSteps) theCustomerSabineMustermannIsSearched(ctx context.Context, fn, ln string) error {
+	   t.count = len(t.customerService.SearchCustomersByName(fn, ln))
+	   return nil
+    }
 
     ```
 

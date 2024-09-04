@@ -27,7 +27,7 @@ Search your code for any field/property which is initialized by a step but never
 
 ## Code Examples
 ### Gherkin
-```gherkin
+```gherkin title="Customer.feature"
 
 Scenario: Should successfully create new customer
     Given the customer first name is "Max"

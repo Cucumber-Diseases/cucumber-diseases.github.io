@@ -25,7 +25,7 @@ When changing or refactoring scenarios or step implementations periodically revi
 These code examples are a bit harder to show as we are looking for some steps that are defined in the implementation that are never used within the Gherkin feature files. There are some telltale signs, such as missing functionality in the step definition code that can point to such smells though.
 
 === "Java"
-    ```java title="src/test/java/org/training/customer/CustomerStepDefinitions.java"
+    ```java title="CustomerStepDefinitions.java"
     @Given("there are no customers") // (1)!
     public void thereAreNoCustomers() {
     }
@@ -52,7 +52,7 @@ These code examples are a bit harder to show as we are looking for some steps th
     1. The steps `there are no customers` and `no customers exist` have a similar meaning. You can clearly see that none of them really has any functionality, which may also hint to the [Rotten Steps smell](/smells/007-rotting-steps). If none of these are used in any of the scenarios they are to be considered `dead steps`.
 
 === "C#"
-    ```csharp title="CucumberDiseases.Specs/StepDefinitions/CustomerStepDefinitions.cs"
+    ```csharp title="CustomerStepDefinitions.cs"
     [Given("there are no customers")] // (1)!
     public void GivenThereAreNoCustomers()
     {
