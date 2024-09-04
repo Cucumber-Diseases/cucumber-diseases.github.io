@@ -28,13 +28,12 @@ Depending on the exact situation different actions may be appropriate.
 
 ## Code Examples
 === "Gherkin"
-   ```gherkin title="Customer.feature"
-    Scenario: Should be able to create two customer with different names
-      Given the customer name is Max Mustermann
-      Given the second customer is Sabine Mustermann
-      When the customer is created # (1)
-      When the second customer is created
-      Then the second customer can be found
-    ```
-
-    1. In this case the creation of the first customer is only executed as a `When` step in order to then execute the creation of the second customer. The actual behaviour under test is the creation of the second customer. A possible solution here would be to create a `Then` step that includes the creation of the first customer.
+```gherkin title="Customer.feature"
+Scenario: Should be able to create two customer with different names
+   Given the customer name is Max Mustermann
+   Given the second customer is Sabine Mustermann
+   When the customer is created # (1)
+   When the second customer is created
+   Then the second customer can be found
+```
+1. In this case the creation of the first customer is only executed as a `When` step in order to then execute the creation of the second customer. The actual behaviour under test is the creation of the second customer. A possible solution here would be to create a `Then` step that includes the creation of the first customer.
