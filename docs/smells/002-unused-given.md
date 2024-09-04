@@ -28,10 +28,11 @@ Search your code for any field/property which is initialized by a step but never
 ## Code Examples
 ### Gherkin
 ```gherkin title="Customer.feature"
+# (1)!
 Scenario: Should successfully create new customer
    Given the customer first name is "Max"
    And the customer last name is "Mustermann"
-   And the customer's birthday is 2000/03/19  # (1)!
+   And the customer's birthday is 2000/03/19  
    When the customer is created
    Then the customer creation should be successful
 ```
