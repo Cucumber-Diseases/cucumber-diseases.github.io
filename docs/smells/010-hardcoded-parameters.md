@@ -21,11 +21,12 @@ When introducing new steps or refactoring existing steps make sure that you are 
 Given there is a user born on 1970-01-01
 ```
 
-the date of `1970-01-01 should be a parameter in the step definition and not hardcoded.
+The date of `1970-01-01 should be a parameter in the step definition and not hardcoded.
 
-* Parameterize: Implement a new step with placeholders and parameters for dynamic values. Replace all hardcoded steps with the new step and remove the previous step implementations.
-* Reuse Existing Steps: If a parameterized version exists, ensure consistent usage.
-* Merge similar scenarios to a 'Scenario Outline'
+* **Leverage Parameter Handling**: Implement a new step with placeholders and parameters for dynamic values. Replace all hardcoded steps with the new step and remove the previous step implementations.
+* **Ensure Consistent Syntax**: Standardize the parameter handling syntax across all step definitions to improve readability and maintainability.
+* **Reuse Existing Steps**: If a parameterized version exists, ensure consistent usage.
+* **Avoid Duplication in Scenarios**: Merge similar scenarios to a data driven test ('Scenario Outline' in Gherkin) and provide mulitple examples in tables.
 
 ## Code Examples
 === "Java"
