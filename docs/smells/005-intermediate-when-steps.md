@@ -28,7 +28,7 @@ Look for scenarios that have more than one `When` (or `When ... And ...`) steps 
 
 ## Code Examples
 ### Gherkin
-```gherkin title="Customer.feature"
+```gherkin
 Scenario: Should find newly created customer
     Given the customer name is Rose Smith
     When the customer is created
