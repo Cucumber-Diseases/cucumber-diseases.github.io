@@ -40,13 +40,13 @@ Regardless of the rating, all the impacts described are a problem. The whole pur
 | [001](001-missing-then.md) | Missing 'Then' Implementation | Gherkin scenarios lack "Then" steps (assertions). |
 | [002](002-unused-given.md) | Unused 'Given' Parameter | Parameters initialized in "Given" steps but never used. |
 | [003](003-data-collector.md) | Data Collector | Setting data incrementally across multiple "Given" steps. |
-| [004](004-redundant-mirror-image.md) | Redundant Mirror Image | Duplicate steps with different expressions but same logic. |
+| [004](004-redundant-mirror-image.md) | Redundant Mirror Image | Duplicate steps with asymmetric expressions but same logic. |
 | [005](005-intermediate-when-steps.md) | Intermediate When Steps | Violation of the fundamental principle of Behavior-Driven Development (BDD): One Scenario, One Behavior! |
 | [006](006-given-when-purpose-mismatch.md) | Given/When Purpose Mismatch | Misuse of Given/When steps |
-| [007](007-rotting-steps.md) | Rotting Steps | Irrelevant or empty steps cluttering scenarios. |
-| [008](008-singular-plural-logic-clones.md) | Singular-Plural Logic Clones | Duplicate steps for singular/plural cases. |
+| [007](007-rotting-steps.md) | Rotting Steps | Irrelevant steps cluttering scenarios. |
+| [008](008-singular-plural-logic-clones.md) | Singular-Plural Logic Clones | Duplicated steps for singular/plural cases. |
 | [009](009-dead-steps.md) | Dead Steps | Step definitions exist but are not used. |
 | [010](010-hardcoded-parameters.md) | Hardcoded Parameters | Using fixed values instead of parameters. |
 | [011](011-dependence-on-class-state.md) | Dependence on Class State | Excessive reliance on context or class state. |
-| [012](012-active-sideeffects-in-then-step.md) | Active Side Effects in Then Step | The "Then" step changes the application state by calling an action. |
-| [013](013-test-code-impurity.md) | Test Code Impurity | Business logic mixed within step definitions. |
+| [012](012-active-sideeffects-in-then-step.md) | Active Side Effects in Then Step | Changes of the application state in "Then" steps. |
+| [013](013-test-code-impurity.md) | Test Code Impurity | Mixing different test automation concerns in step definitions. |
