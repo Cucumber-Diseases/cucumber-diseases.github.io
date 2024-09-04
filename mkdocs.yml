@@ -56,6 +56,7 @@ nav:
     - intro/contributors.md
   - Practice Repositories:
     - repos/index.md
+    - repos/example_application.md
     - repos/java.md
     - repos/go.md
     - repos/python.md
