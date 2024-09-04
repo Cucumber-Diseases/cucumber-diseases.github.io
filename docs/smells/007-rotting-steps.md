@@ -24,10 +24,11 @@ Eliminate steps that don’t contribute to the behavior being tested. Indicators
 
 
 ## Code Examples
-
+### Gherkin
 ```gherkin title="Customer.feature"
 Scenario: Should find newly created customer
-    Given there are no customers # (1)!
+    Given there are no customers
+# (1)!
     And the customer name is Rose Smith
     When the customer is created
     Then the customer can be found
