@@ -29,6 +29,7 @@ Depending on the exact situation different actions may be appropriate.
 ## Code Examples
 ### Gherkin
 ```gherkin title="Customer.feature"
+
 Scenario: Should be able to create two customer with different names
    Given the customer name is Max Mustermann
    Given the second customer is Sabine Mustermann
