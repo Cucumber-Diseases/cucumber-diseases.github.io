@@ -32,7 +32,7 @@ Depending on the exact situation different actions may be appropriate.
 Scenario: Should be able to create two customer with different names
    Given the customer name is Max Mustermann
    Given the second customer is Sabine Mustermann
-   When the customer is created # (1)
+   When the customer is created # (1)!
    When the second customer is created
    Then the second customer can be found
 ```
