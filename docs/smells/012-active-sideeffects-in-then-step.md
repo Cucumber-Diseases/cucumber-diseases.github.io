@@ -57,7 +57,18 @@ Remember that adhering to the intended purpose of each step (`Given`, `When`, `T
     
 === "Python"
     ```python title="features/steps/steps.py"
-    ...
+    @then(u'the creation of customer (?P<first_name>.*?) (?P<last_name>.*?) should fail')
+    def step_impl(context, first_name, last_name):
+        caught = None
+        try:
+            # (1)!
+            context.service.add_customer(first_name, last_name, context.default_birthday) 
+        except ValueError as e:
+            caught = e
+
+        assert_that(caught).is_not_none()
+        assert_that(str(caught)).is_equal_to("Customer already exists")
+
     ```
 
     1. Creating the customer in the `Then` step is an active side effect. Since we are checking exactly this data, we should move it to a appropiate `When` impelementation. 
