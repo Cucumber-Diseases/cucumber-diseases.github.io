@@ -13,15 +13,19 @@ one such step definition and implement the correct assertion.
 
 === "Hints"
     ??? tip "Hint A"
-        * You are looking for a `Then` step that is verifying if a customer was created successfully.
+        * You are looking for a scenario with multiple `Given` steps for creating customers.
 
     ??? tip "Hint B"
-        * The relevant step is `Given the customer first name is "Max"`and `And the customer last name is "Mustermann"`.
-        * Look at the implementation in the step definition, how it clutters the scenario and the initialized fields.
-        * Identify an existing consistent expression instead.
+        * The relevant steps is `` and .
+        * Look at the implementation of the code in the step definition.
+
+    ??? tip "Hint C"
+        * The relevant step is `Then the customer creation should be successful`.
+        * The step definition is an empty function that does not do anything.
+        * Think of what it should actually do and implement the correct assertion.
 
     ??? tip "Step by Step Walkthrough"
-        * The relevant step is `Given the customer first name is "Max"`and `And the customer last name is "Mustermann"`.
-        * The consistent way to initialize `firstName`and `lastName` is the step `Given the customer name is Rose Smith`
-        * Replace the original steps with `Given the customer name is Max Mustermann`
-        * Delete the dead step implementations `Given the customer first name is "Max"`and `And the customer last name is "Mustermann"`.
+        * The relevant step is `Then the customer creation should be successful`.
+        * The step definition is an empty function that does not do anything.
+        * The function should implement an assertion of the error field.
+        * Assert that the error field (e.g. `this.error` in java or `t.err` in go) is null.
