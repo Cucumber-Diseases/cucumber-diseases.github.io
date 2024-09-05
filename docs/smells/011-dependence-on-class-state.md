@@ -48,10 +48,33 @@ Scenario: ...
 ### Step Implementation
 === "Java"
     ```java title="CustomerStepDefinitions.java"
-    ...
+    private String firstName; // (1)!
+    private String lastName;
+
+    @Given("the customer name is {} {}")
+    public void theCustomerNameIs(String firstName, String lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+
+    @When("the customer is created")
+    @When("an invalid customer is created")
+    public void createCustomerAndStoreSuccess() {
+        try {
+            customerService.addCustomer(firstName, lastName, DEFAULT_BIRTHDAY);
+        } catch (IllegalArgumentException e) {
+            error = e;
+        }
+    }
+
+    @Then("the customer can be found")
+    public void theCustomerCanBeFound() {
+        var customer = customerService.searchCustomer(firstName, lastName);
+        Assertions.assertThat(customer).isNotNull();
+    }
     ```
 
-    1. The expressions `there is a customer` and `there are some customers` handle the singular and plural case of the same step. The share a similar logic and can therefore be merged.
+    1. The fields `firstName` and `lastName` are populuted over all steps. Consider passing them as parameters. This makes the steps independent and reusable for other fields, too.
     
 === "Python"
     ```python title="features/steps/steps.py"
