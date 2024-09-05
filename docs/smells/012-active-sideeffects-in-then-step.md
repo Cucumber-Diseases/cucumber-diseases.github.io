@@ -16,14 +16,16 @@ The presence of this smell can lead to several problems and risks:
 !!! failure "Increased Complexity and indirect Coupling"
     Introducing side effects in `Then` steps lead to tighter coupling between tests and the underlying code, increasing the complexity and interdependencies between steps. This makes the test suite more brittle and less modular. Further you might need to consider cleanup procedures even though you would expect it here.
 
-## Required Action
+## Required Actions
+
+### Fixing
 
 * **Separate Concerns**: Ensure that any action that changes the state of the application is placed in the appropriate Given or When step. Given should handle all setup and preconditions, while When should execute the actions that the scenario is testing.
 * **Use Background Steps**: Utilize the `Background` section to set up common data or preconditions shared across multiple scenarios. Keep the `Then` step focused on verifying outcomes without introducing side effects.
 
 Remember that adhering to the intended purpose of each step (`Given`, `When`, `Then`) promotes cleaner, more maintainable Gherkin scenarios and reduces the risk of introducing Cucumber diseases like this one. 😊
 
-## Prevention Actions
+## Prevention
 
 * **Refactor the Then Steps**: If you find state-altering code within a Then step, refactor it by moving those actions to a Given or When step, depending on where it logically belongs. Then steps should be refocused on assertions that check the results of actions performed in the When step.
 * **Review Scenarios for Alignment**: Regularly review your scenarios to ensure that each step is aligned with its intended purpose. Given sets up the context, When performs the actions, and Then verifies the outcomes. This alignment helps maintain clear and understandable tests.
