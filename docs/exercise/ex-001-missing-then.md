@@ -1,4 +1,4 @@
-# Exercise 001: Implmement Missing Then Implementation
+# Exercise 001: Implement Missing Then Implementation
 :link: [Related Smell: 001 - Missing Then Implementation](/smells/001-missing-then)
 
 ## Purpose
