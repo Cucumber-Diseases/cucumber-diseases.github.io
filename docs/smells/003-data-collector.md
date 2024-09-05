@@ -14,6 +14,9 @@ By passing data piece by piece, this pattern leads to long scripts with individu
 !!! failure "Increased Coupling" 
     The coupling between scenarios and step implementation increases, especially when the order of steps matters. Changes in one step may ripple through others, affecting the entire scenario.
 
+!!! failure "Inconsistent Data" 
+    The user of the scenarion must not omit any mandatory `Given` steps. If all required steps are not executed, it may result in inconsistent or uninitialized data.
+
 !!! warning "Increased Script Length"
     The scenario becomes verbose due to numerous steps dedicated to setting field values.
 

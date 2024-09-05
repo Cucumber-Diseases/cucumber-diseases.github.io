@@ -3,20 +3,19 @@
 
 ## Purpose
 * Learn to identify the `The Data Collector` smell.
-* Understand which complications arise from having empty step definitions and how to spot them.
+* Recognize how multiple `Given`steps 
 
 ## Your Task
-Within the `Customer.feature` file there is a `Then` step that does not do anything. Find at least
-one such step definition and implement the correct assertion.
+Within the `Customer.feature` file there is a scenario with multiple `Given` steps, each collecting a part of the data needed in the following `When` step. Identify the data collector and replace it with a consistent implementation.
 
 ## Solution
 
 === "Hints"
     ??? tip "Hint A"
-        * You are looking for a `Then` step that is verifying if a customer was created successfully.
+        * You are looking for a scenario with multiple `Given` steps for creating customers.
 
     ??? tip "Hint B"
-        * The relevant step is `Then the customer creation should be successful`.
+        * The relevant steps is `` and .
         * Look at the implementation of the code in te step definition.
 
     ??? tip "Hint C"
