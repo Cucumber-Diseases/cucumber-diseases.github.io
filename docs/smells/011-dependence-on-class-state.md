@@ -32,18 +32,7 @@ The "Dependence on Class State" occurs when step definitions rely heavily on cla
 
 
 ## Code Examples
-!!! warning "TODO"
-To understand this smell, please refer to the Gherkin code as well as the code in the implementation in one of the programming languages. It makes the most sense if the scenarios and the implementation are both read together.
 
-### Gherkin
-```gherkin title="Customer.feature"
-
-# (1)!
-Scenario: ...
-
-```
-
-1. Notes ...
 
 ### Step Implementation
 === "Java"
