@@ -32,10 +32,7 @@ Remember that adhering to the intended purpose of each step (`Given`, `When`, `T
 * **Use Mocks or Stubs**: If the Then step is intended to validate interactions without causing side effects, consider using mocks or stubs. This approach allows you to simulate the interaction without actually changing the application's state, keeping your Then steps focused on validation.
 
 ## Code Examples
-To understand this smell, please refer to the Gherkin code as well as the code in the implementation in one of the programming languages. It makes the most sense if the scenarios and the implementation are both read together.
 
-
-### Step Implementation
 === "Java"
     ```java title="CustomerStepDefinitions.java"
     @Then("the second customer can be found")
