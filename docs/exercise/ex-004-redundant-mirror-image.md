@@ -1,8 +1,8 @@
-# Exercise 001: Implement Missing Then Implementation
-:link: [Related Smell: 001 - Missing Then Implementation](/smells/001-missing-then)
+# Exercise 004: Refactor Redundant Mirror Image
+:link: [Related Smell: 004 - Redundant Mirror Image](/smells/004-redundant-mirror-image.md)
 
 ## Purpose
-* Learn to identify the `Missing Then Step` smell.
+* Learn to identify the `Redundant Mirror Image` smell.
 * Understand which complications arise from having empty step definitions and how to spot them.
 
 ## Your Task

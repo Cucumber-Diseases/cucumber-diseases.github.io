@@ -1,4 +1,4 @@
-# Exercise 003: The Data Collector
+# Exercise 003: Remove Data Collector
 :link: [Related Smell: 003 - The Data Collector](/smells/003-data-collector.md)
 
 ## Purpose

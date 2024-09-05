@@ -1,4 +1,4 @@
-# Exercise 002: Unused Given Parameter
+# Exercise 002: Remove Unused Given Parameter
 :link: [Related Smell: 002 - Unused Given Parameter](/smells/002-unused-given.md)
 
 ## Purpose
