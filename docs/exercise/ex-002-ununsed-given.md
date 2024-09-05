@@ -3,7 +3,7 @@
 
 ## Purpose
 * Learn to identify the `Unused Given Parameter` smell.
-* Understand which complications arise from having empty step definitions and how to spot them.
+* Understand to clean it up and how to spot them.
 
 ## Your Task
 Within the `Customer.feature` file there is a `Then` step that does not do anything. Find at least
