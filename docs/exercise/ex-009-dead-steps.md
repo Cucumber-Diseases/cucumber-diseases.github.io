@@ -1,8 +1,8 @@
-# Exercise 001: Implement Missing Then Implementation
-:link: [Related Smell: 001 - Missing Then Implementation](/smells/001-missing-then)
+# Exercise 009: Remove Dead Steps
+:link: [Related Smell: 009 - Dead Steps](/smells/009-dead-steps.md)
 
 ## Purpose
-* Learn to identify the `Missing Then Step` smell.
+* Learn to identify the `Dead Steps` smell.
 * Understand which complications arise from having empty step definitions and how to spot them.
 
 ## Your Task

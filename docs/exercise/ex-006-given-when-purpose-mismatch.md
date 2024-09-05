@@ -1,8 +1,8 @@
-# Exercise 001: Implement Missing Then Implementation
-:link: [Related Smell: 001 - Missing Then Implementation](/smells/001-missing-then)
+# Exercise 006: Refactor Given/When Purpose Mismatch
+:link: [Related Smell: 006 - Given/When Purpose Mismatch](/smells/006-given-when-purpose-mismatch.md)
 
 ## Purpose
-* Learn to identify the `Missing Then Step` smell.
+* Learn to identify the `Given/When Purpose Mismatch` smell.
 * Understand which complications arise from having empty step definitions and how to spot them.
 
 ## Your Task

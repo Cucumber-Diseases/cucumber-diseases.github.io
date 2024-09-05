@@ -1,5 +1,5 @@
-# Exercise 001: Implement Missing Then Implementation
-:link: [Related Smell: 001 - Missing Then Implementation](/smells/001-missing-then)
+# Exercise 010: Replace Hardcoded Parameters
+:link: [Related Smell: 010 - Hardcoded Parameters](/smells/010-hardcoded-paramters)
 
 ## Purpose
 * Learn to identify the `Missing Then Step` smell.

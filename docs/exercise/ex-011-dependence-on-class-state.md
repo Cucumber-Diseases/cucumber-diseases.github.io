@@ -1,8 +1,8 @@
-# Exercise 001: Implement Missing Then Implementation
-:link: [Related Smell: 001 - Missing Then Implementation](/smells/001-missing-then)
+# Exercise 011: Remove Dependence on Class State
+:link: [Related Smell: 011 - Dependence on Class State](/smells/011-dependence-on-class-state)
 
 ## Purpose
-* Learn to identify the `Missing Then Step` smell.
+* Learn to identify the `Dependence on Class State` smell.
 * Understand which complications arise from having empty step definitions and how to spot them.
 
 ## Your Task

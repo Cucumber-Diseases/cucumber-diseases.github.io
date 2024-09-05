@@ -1,8 +1,8 @@
-# Exercise 001: Implement Missing Then Implementation
-:link: [Related Smell: 001 - Missing Then Implementation](/smells/001-missing-then)
+# Exercise 012: Refactor Active Side Effects in Then Step
+:link: [Related Smell: 012 - Active Side Effects in Then Step](/smells/012-active-sideeffects-in-then-steps)
 
 ## Purpose
-* Learn to identify the `Missing Then Step` smell.
+* Learn to identify the `Active Side Effects in Then Step` smell.
 * Understand which complications arise from having empty step definitions and how to spot them.
 
 ## Your Task

@@ -1,5 +1,5 @@
-# Exercise 001: Implement Missing Then Implementation
-:link: [Related Smell: 001 - Missing Then Implementation](/smells/001-missing-then)
+# Exercise 013: Refactor Test Code Impurity
+:link: [Related Smell: 013 - Test Code Impurity](/smells/013-test-code-impurity)
 
 ## Purpose
 * Learn to identify the `Missing Then Step` smell.
