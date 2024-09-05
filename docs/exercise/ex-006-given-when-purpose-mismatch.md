@@ -1,5 +1,5 @@
 # Exercise 006: Refactor Given/When Purpose Mismatch
-:link: [Related Smell: 006 - Given/When Purpose Mismatch](/smells/006-given-when-purpose-mismatch.md)
+:link: [Related Smell: 006 - Given/When Purpose Mismatch](/smells/006-given-when-purpose-mismatch)
 
 ## Purpose
 * Learn to identify the `Given/When Purpose Mismatch` smell.

@@ -1,5 +1,5 @@
 # Exercise 004: Refactor Redundant Mirror Image
-:link: [Related Smell: 004 - Redundant Mirror Image](/smells/004-redundant-mirror-image.md)
+:link: [Related Smell: 004 - Redundant Mirror Image](/smells/004-redundant-mirror-image)
 
 ## Purpose
 * Learn to identify the `Redundant Mirror Image` smell.

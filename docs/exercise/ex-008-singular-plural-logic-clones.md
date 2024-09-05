@@ -1,5 +1,5 @@
 # Exercise 008: Merge Singular-Plural Logic Clones
-:link: [Related Smell: 008 - Singular-Plural Logic Clones](/smells/008-singular-plural-clones.md)
+:link: [Related Smell: 008 - Singular-Plural Logic Clones](/smells/008-singular-plural-logic-clones)
 
 ## Purpose
 * Learn to identify the `Missing Then Step` smell.

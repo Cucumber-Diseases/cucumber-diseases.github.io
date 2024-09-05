@@ -1,5 +1,5 @@
 # Exercise 005: Refactor Intermediate When Steps
-:link: [Related Smell: 005 - Intermediate When Steps](/smells/005-intermediate-when-steps.md)
+:link: [Related Smell: 005 - Intermediate When Steps](/smells/005-intermediate-when-steps)
 
 ## Purpose
 * Learn to identify the `Intermediate When Steps` smell.

@@ -1,5 +1,5 @@
 # Exercise 010: Replace Hardcoded Parameters
-:link: [Related Smell: 010 - Hardcoded Parameters](/smells/010-hardcoded-paramters)
+:link: [Related Smell: 010 - Hardcoded Parameters](/smells/010-hardcoded-parameters)
 
 ## Purpose
 * Learn to identify the `Missing Then Step` smell.

@@ -1,5 +1,5 @@
 # Exercise 009: Remove Dead Steps
-:link: [Related Smell: 009 - Dead Steps](/smells/009-dead-steps.md)
+:link: [Related Smell: 009 - Dead Steps](/smells/009-dead-steps)
 
 ## Purpose
 * Learn to identify the `Dead Steps` smell.

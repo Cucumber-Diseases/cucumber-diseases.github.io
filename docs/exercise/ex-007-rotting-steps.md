@@ -1,5 +1,5 @@
 # Exercise 007: Remove Rotting Steps
-:link: [Related Smell: 007 - Rotting Steps](/smells/007-rotting-steps.md)
+:link: [Related Smell: 007 - Rotting Steps](/smells/007-rotting-steps)
 
 ## Purpose
 * Learn to identify the `Rotting Steps` smell.

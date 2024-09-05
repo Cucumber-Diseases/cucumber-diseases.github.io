@@ -1,5 +1,5 @@
 # Exercise 012: Refactor Active Side Effects in Then Step
-:link: [Related Smell: 012 - Active Side Effects in Then Step](/smells/012-active-sideeffects-in-then-steps)
+:link: [Related Smell: 012 - Active Side Effects in Then Step](/smells/012-active-sideeffects-in-then-step)
 
 ## Purpose
 * Learn to identify the `Active Side Effects in Then Step` smell.

@@ -1,5 +1,5 @@
 # Exercise 003: Remove Data Collector
-:link: [Related Smell: 003 - The Data Collector](/smells/003-data-collector.md)
+:link: [Related Smell: 003 - The Data Collector](/smells/003-data-collector)
 
 ## Purpose
 * Learn to identify the `The Data Collector` smell.

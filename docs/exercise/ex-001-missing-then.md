@@ -1,5 +1,5 @@
 # Exercise 001: Implement Missing Then Implementation
-:link: [Related Smell: 001 - Missing Then Implementation](/smells/001-missing-then.md)
+:link: [Related Smell: 001 - Missing Then Implementation](/smells/001-missing-then)
 
 ## Purpose
 * Learn to identify the `Missing Then Step` smell.
