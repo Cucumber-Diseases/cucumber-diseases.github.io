@@ -1,5 +1,5 @@
 # 011: Dependence on Class State
-This code smell occurs when everything is stored either in a context or in the fields of your step implementation. Often, this state is even duplicated because we prepared the state of the application previously. This can lead to tightly coupled tests that are difficult to maintain and understand.
+The "Dependence on Class State" occurs when step definitions rely heavily on class fields or context objects to store and share data between steps. Often, this state is duplicated or overlaps with previously prepared data in the application, leading to unnecessary complexity. In this scenario, the state is stored either in the fields of the step definition class or in a shared context object, which is akin to a global variable. This approach introduces hidden dependencies between steps and can result in tightly coupled tests where the behavior of one step is implicitly tied to the internal state managed by the class or context. This creates a brittle test structure where understanding and maintaining the state becomes challenging, especially as the test suite grows.
 
 ## Impact
 
@@ -7,23 +7,29 @@ This code smell occurs when everything is stored either in a context or in the f
     Tests become harder to understand as the state of the application is scattered across multiple locations.
     
 !!! failure "Harder Maintenance"
-    Changes to the system under test may require extensive modifications to step definitions, increasing maintenance effort.
+    Storing state in class fields or context introduces tight coupling between steps. As tests evolve, changing the state management in one step could inadvertently break others, leading to fragile and harder-to-maintain test cases.
 
 !!! failure "Increased Complexity"
-    The codebase becomes more complex and difficult to manage due to the use of class state over different steps.
+    Shraing state always increases complexity, as developers need to understand not only the logic of each step but also how the state is manipulated across multiple steps. This makes the tests more prone to errors and bugs, especially in large test suites.
 
 !!! warning "Increased Coupling"
-    Tests become tightly coupled to the system's state, making them less reusable and more prone to breaking. Further they become less reliable if the state of the application is not properly managed or controlled.
+    Using context or class fields to manage state creates implicit dependencies between steps, violating the principle of isolation between tests. This can lead to flakiness, where tests might pass or fail depending on the order in which they are executed.
 
 ## Required Action
 
-!!! warning "TODO"
-    describe details of exercise
+### Fixing
 
-* **Pass Data Explicitly**: Reduce the reliance on class state by passing data directly to step definitions as parameters.
-* **Avoid Premature Data Gathering**: Gather data only when needed. If data can be collected later in the scenario, defer its retrieval to a later step and pass it to the subsequent steps as necessary.
+* **Pass Data Explicitly**: Instead of relying on fields in the step implementation class, refactor your steps and pass data directly between steps via method parameters or use clear, explicit constructs like local variables. This keeps the state management simple, localized, and easy to follow.
+* **Refactor Tests to Reduce Duplication**: Ensure that state is only prepared once in the Given step, avoiding the need for duplicated or redundant state management. Ensure each step has a clear and distinct responsibility, and refactor any steps that introduce unnecessary coupling or complexity through shared state.
+* **Use Scenario Context Sparingly**: Context objects can act like global variables, leading to unclear and tightly coupled tests, avoid overusing it. Limit the amount of data stored in the context to essential information. Consider whether a step really needs access to the entire context or if a smaller subset suffices.
+* **Replace static objects with context objects**: Never use static shared objects to exchange state between steps. If you must share state across steps, dependency injection of context objects to manage it in a controlled and transparent way. This allows for better control over the lifecycle and visibility of shared state.
+
+### Prevention
+
 * **Reuse Application State**: Don't hold data twice in your application and in your test classes. Prefer the usage of test data in your application state for example a database instead of temporary storage in your objects.
-* **Use Scenario Context Sparingly**: While scenario context can be useful, avoid overusing it. Limit the amount of data stored in the context to essential information. Consider whether a step really needs access to the entire context or if a smaller subset suffices.
+* **Keep Steps Isolated**: Steps should not depend on state manipulated by previous steps. Each step should be able to stand alone and express its purpose clearly. If state sharing is necessary, consider refactoring the test logic to make the dependencies explicit and well-defined.
+* **Avoid Premature Data Gathering**: Gather data only when needed. If data can be collected later in the scenario, defer its retrieval to a later step and pass it to the subsequent steps as necessary.
+
 
 ## Code Examples
 !!! warning "TODO"
