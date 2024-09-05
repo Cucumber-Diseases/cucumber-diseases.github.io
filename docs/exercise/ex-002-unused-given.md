@@ -3,11 +3,11 @@
 
 ## Purpose
 * Learn to identify the `Unused Given Parameter` smell.
-* Understand to clean it up and how to spot them.
+* Understand how to clean it up and how to find all occurances spread over different locations.
 
 ## Your Task
-Within the `Customer.feature` file there is a `Then` step that does not do anything. Find at least
-one such step definition and implement the correct assertion.
+Within the step implementation file there is field, which is intialized by a `Given`step in the `Customer.feature`but never ued. Find at least
+one such fieldkd and remove the code and the step.
 
 ## Solution
 
@@ -29,6 +29,6 @@ one such step definition and implement the correct assertion.
         * The field `birthday` is only initialized in the step `And the customer's birthday is 2000/03/19`.
         * A default birthday is passed to the business function 'Add Customer' in multiple steps.
         * Decide to use the default birthday, since there is no assertion on the correct birthday.
-        * Remove the in the step implementation the code.
-        * Remove the in the Gherkin feature the step `And the customer's birthday is 2000/03/19`.
+        * Remove the in the step from the step implementation file .
+        * Remove the in `Custoer.feature' the step `And the customer's birthday is 2000/03/19`.
     
