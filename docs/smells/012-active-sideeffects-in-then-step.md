@@ -79,7 +79,25 @@ Remember that adhering to the intended purpose of each step (`Given`, `When`, `T
 
 === "Go"
     ```go title="customer_test.go"
-    ...
+    func InitializeScenario(sc *godog.ScenarioContext) {
+        // ...
+        sc.Then(`the second customer creation should fail`, t.theSecondCustomerCreationShouldFail)
+        // ...
+    }
+
+    func (t *CustomerTestSteps) theSecondCustomerCreationShouldFail(ctx context.Context) error {
+        // (1)!
+        err := t.customerService.AddCustomer(t.secondFirstName, t.secondLastName, DEFAULT_BIRTHDAY)
+        if err == nil {
+            return fmt.Errorf("expected error but got nil")
+        }
+
+        if err.Error() != "customer already exists" {
+            return fmt.Errorf("expected 'customer already exists' error but got '%s'", err.Error())
+        }
+
+        return nil
+    }
     ```
 
     1. Creating the customer in the `Then` step is an active side effect. Since we are checking exactly this data, we should move it to a appropiate `When` impelementation. 
