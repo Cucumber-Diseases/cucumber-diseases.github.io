@@ -79,7 +79,7 @@ nav:
   - Deliberate Exercise:
     - exercise/index.md
     - exercise/ex-001-missing-then.md
-    - exercise/ex-002-missing-then.md
+    - exercise/ex-002-unused-given.md
     - exercise/ex-003-data-collector.md
     - exercise/ex-004-redundant-mirror-image.md
     - exercise/ex-005-intermediate-when-steps.md
