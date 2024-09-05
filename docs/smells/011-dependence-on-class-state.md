@@ -85,11 +85,40 @@ Scenario: ...
 
 
 === "C#"
-    ```csharp title="CucumberDiseases.Specs/StepDefinitions/CustomerStepDefinitions.cs"
-    ...
+    ```csharp title="CustomerStepDefinitions.cs"
+    private string _firstName; // (1)!
+    private string _lastName;
+
+    [Given("the customer name is {} {}")]
+    public void GivenTheCustomerNameIs(string firstName, string lastName)
+    {
+        _firstName = firstName;
+        _lastName = lastName;
+    }
+    
+    [When("the customer is created")]
+    [When("an invalid customer is created")]
+    public void CreateCustomerAndStoreSuccess()
+    {
+        try
+        {
+            _customerService.AddCustomer(_firstName, _lastName, DefaultBirthday);
+        }
+        catch (ArgumentException ex)
+        {
+            _error = ex;
+        }
+    }
+
+    [Then("the customer can be found")]
+    public void ThenTheCustomerCanBeFound()
+    {
+        var customer = _customerService.FindCustomer(_firstName, _lastName);
+        customer.Should().BeEquivalentTo(new { FirstName = _firstName, LastName = _lastName });
+    }
     ```
 
-    1. The expressions `there is a customer` and `there are some customers` handle the singular and plural case of the same step. The share a similar logic and can therefore be merged.
+    1. The fields `firstName` and `lastName` are populuted over all steps. Consider passing them as parameters. This makes the steps independent and reusable for other fields, too.
 
 === "Go"
     ```go title="customer_test.go"
