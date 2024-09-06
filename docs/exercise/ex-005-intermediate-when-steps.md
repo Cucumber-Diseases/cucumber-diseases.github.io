@@ -33,7 +33,7 @@ Within the `Customer.feature` file there are scenerios with multiple `When` step
 
 === "Diffs"
     === "Java"
-        GitHub Commit (https://github.com/Cucumber-Diseases/cucumber-diseases-java/commit/d1ddfac363106cdf94088b275ac3aa90ae907db0)
+        :link: [GitHub Commit](https://github.com/Cucumber-Diseases/cucumber-diseases-java/commit/d1ddfac363106cdf94088b275ac3aa90ae907db0)
     
     === "Python"
 

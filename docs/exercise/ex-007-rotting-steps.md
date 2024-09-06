@@ -30,7 +30,7 @@ Find the step definition and remove it.
 
 === "Diffs"
     === "Java"
-        GitHub Commit (https://github.com/Cucumber-Diseases/cucumber-diseases-java/commit/707c18efc3edab9785dd3a11338147892cfd0119)
+        :link: [GitHub Commit](https://github.com/Cucumber-Diseases/cucumber-diseases-java/commit/707c18efc3edab9785dd3a11338147892cfd0119)
     
     === "Python"
 
