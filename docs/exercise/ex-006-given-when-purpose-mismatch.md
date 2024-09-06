@@ -3,30 +3,50 @@
 
 ## Purpose
 * Learn to identify the `Given/When Purpose Mismatch` smell.
-* Understand which complications arise from having empty step definitions and how to spot them.
+* Understand the different meaning of the steps `Given`versus `When` even the functionality is the same.
 
 ## Your Task
-Within the `Customer.feature` file there is a `Then` step that does not do anything. Find at least
-one such step definition and implement the correct assertion.
+Within the `Customer.feature` file there are multiple occurance of this smell. The exercise is prepared in a way that you only need to refactor steps in the scenarios. Be aware that this is not always the case.  
+Find all scenarios with the smell and replace the `When` steps with `Given` instead.
 
 ## Solution
 
 === "Hints"
     ??? tip "Hint A"
-        * You are looking for a `Then` step that is verifying if a customer was created successfully.
+        * Find all occurances of the smell. You are looking for three scenarios.
 
     ??? tip "Hint B"
-        * The relevant step is `Then the customer creation should be successful`.
-        * Look at the implementation of the code in te step definition.
+        * The first occurance is here:
+        ```
+        Scenario: Should be able to create two customer with different names
+            Given the customer name is Max Mustermann
+            When the customer is created
+            Given the second customer is Sabine Mustermann
+            When the second customer is created
+            Then the second customer can be found
+        ```
+        * Identify which `When` should become a `Given` step.
+        * What's wrong using a `When` step?
 
     ??? tip "Hint C"
-        * The relevant step is `Then the customer creation should be successful`.
-        * The step definition is an empty function that does not do anything.
-        * Think of what it should actually do and implement the correct assertion.
+        * The step `When the customer is created` should be replaced.
+        * This `When` has two purposes: create an customer and focus on the error handling in the code. 
+        * We only want to verified the creation of the 2nd customer, the 1st is the `Given/When Purpose Mismatch` smell.
+        * Which existing 'Given' step can we you instead?
 
     ??? tip "Step by Step Walkthrough"
-        * The relevant step is `Then the customer creation should be successful`.
-        * The step definition is an empty function that does not do anything.
-        * The function should implement an assertion of the error field.
-        * Assert that the error field (e.g. `this.error` in java or `t.err` in go) is null.
-    
+        * The step `When the customer is created` should be replaced.
+        * We can use this `Given` step insted:
+        ```
+        Given there is a customer
+            | Max | Mustermann |    
+        ```
+        Find the two remaining `Given/When Purpose Mismatch` smells
+
+    ??? tip "Remove all smells"
+        * Repeat the previous solution in the scenario `Scenario: Cannot create two customer with the same name` and `Scenario: Should find customers by name`
+
+
+=== "Diffs"
+    === "Gherkin"
+        :link: [GitHub Commit](https://github.com/Cucumber-Diseases/cucumber-diseases-java/commit/75982e67a4d900351d7bfe20fb2a83191bda1dcc)
