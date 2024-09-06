@@ -3,30 +3,43 @@
 
 ## Purpose
 * Learn to identify the `Intermediate When Steps` smell.
-* Understand which complications arise from having empty step definitions and how to spot them.
+* Learn how to avoid multiple `When`steps and understand that multiple actions lead to unclear scenarios.
 
 ## Your Task
-Within the `Customer.feature` file there is a `Then` step that does not do anything. Find at least
-one such step definition and implement the correct assertion.
+Within the `Customer.feature` file there are scenerios with multiple `When` steps. One of those stores an intermediate result to verify it afterwards. Find the `When`steps and merge them so that the intermediate result is not necessary anymore.
 
 ## Solution
 
 === "Hints"
     ??? tip "Hint A"
-        * You are looking for a `Then` step that is verifying if a customer was created successfully.
+        * You are looking for a second intermediate `When` step that is searching for all customers.
+        * Make sure you also consider `And` steps.
 
     ??? tip "Hint B"
-        * The relevant step is `Then the customer creation should be successful`.
-        * Look at the implementation of the code in te step definition.
+        * The relevant step is `And all customers are searched`
+        * Look at the implemenation. Why is the `When`step necessary?
 
     ??? tip "Hint C"
-        * The relevant step is `Then the customer creation should be successful`.
-        * The step definition is an empty function that does not do anything.
-        * Think of what it should actually do and implement the correct assertion.
+        * The relevant step is `And all customers are searched`
+        * The `And all customers are searched` stores a count, which is checked by the `Then`step.
+        * Check the name of the scenario, how can the existing steps be replaced with a step which expresses the intention more clearly?
 
     ??? tip "Step by Step Walkthrough"
-        * The relevant step is `Then the customer creation should be successful`.
-        * The step definition is an empty function that does not do anything.
-        * The function should implement an assertion of the error field.
-        * Assert that the error field (e.g. `this.error` in java or `t.err` in go) is null.
+        * The relevant step is `And all customers are searched`
+        * The scenario is create a customer and find it afterwords. 
+        * Searching and counting doesn't clearly express this business need.
+        * Instead the `Then`step should find by name the created customer and check if it matches.
+        * Replace `And all customers are searched` and `Then the number of customers found is 1` with `Then the customer can be found`
+
+=== "Diff"
+    GitHub Commit (https://github.com/Cucumber-Diseases/cucumber-diseases-java/commit/d1ddfac363106cdf94088b275ac3aa90ae907db0)
+
+=== "Diffs"
+    === "Java"
+        GitHub Commit (https://github.com/Cucumber-Diseases/cucumber-diseases-java/commit/d1ddfac363106cdf94088b275ac3aa90ae907db0)
     
+    === "Python"
+
+    === "C#"
+
+    === "Go"
