@@ -2,31 +2,35 @@
 :link: [Related Smell: 008 - Singular-Plural Logic Clones](/smells/008-singular-plural-logic-clones)
 
 ## Purpose
-* Learn to identify the `Missing Then Step` smell.
-* Understand which complications arise from having empty step definitions and how to spot them.
+* Learn to identify the `Singular-Plural Logic Clones` smell.
+* Understand what complications arise from merging similar step definitions and how to spot them.
 
 ## Your Task
-Within the `Customer.feature` file there is a `Then` step that does not do anything. Find at least
-one such step definition and implement the correct assertion.
+Within the step implementation there is a singular and plural expression with a similar implementation. Find 
+the 2 steps, learn how to merge them and which complications you shoud consider.
 
 ## Solution
 
 === "Hints"
     ??? tip "Hint A"
-        * You are looking for a `Then` step that is verifying if a customer was created successfully.
+        * You are looking two `Given` steps: first, creation of a single customer and second multiple customers.
 
     ??? tip "Hint B"
-        * The relevant step is `Then the customer creation should be successful`.
-        * Look at the implementation of the code in te step definition.
-
-    ??? tip "Hint C"
-        * The relevant step is `Then the customer creation should be successful`.
-        * The step definition is an empty function that does not do anything.
-        * Think of what it should actually do and implement the correct assertion.
+        * The relevant steps are `Given there is a customer` and `Given there are some customers`.
+        * Look at the implementation of the code in the step definition. 
+        * How can we merge the implementation? What kind of conflicts do we expect?
 
     ??? tip "Step by Step Walkthrough"
-        * The relevant step is `Then the customer creation should be successful`.
-        * The step definition is an empty function that does not do anything.
-        * The function should implement an assertion of the error field.
-        * Assert that the error field (e.g. `this.error` in java or `t.err` in go) is null.
+        * The relevant steps are `Given there is a customer` and `Given there are some customers`.
+        * We move the two expression in the code over one implementation i.e. two expression and one function
+        * The problem is that the single case doesn't expect a header. So we need to add the header in all scenarios in the `Customer.feature` file, too.
+
+=== "Diffs"
+    === "Java"
+        :link: [GitHub Commit](https://github.com/Cucumber-Diseases/cucumber-diseases-java/commit/c95d3624178dc279fff2cbfb5dcf48af3f70aa9d)
     
+    === "Python"
+
+    === "C#"
+
+    === "Go"
