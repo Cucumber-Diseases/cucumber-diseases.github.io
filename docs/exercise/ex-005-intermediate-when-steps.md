@@ -31,9 +31,6 @@ Within the `Customer.feature` file there are scenerios with multiple `When` step
         * Instead the `Then`step should find by name the created customer and check if it matches.
         * Replace `And all customers are searched` and `Then the number of customers found is 1` with `Then the customer can be found`
 
-=== "Diff"
-    GitHub Commit (https://github.com/Cucumber-Diseases/cucumber-diseases-java/commit/d1ddfac363106cdf94088b275ac3aa90ae907db0)
-
 === "Diffs"
     === "Java"
         GitHub Commit (https://github.com/Cucumber-Diseases/cucumber-diseases-java/commit/d1ddfac363106cdf94088b275ac3aa90ae907db0)
