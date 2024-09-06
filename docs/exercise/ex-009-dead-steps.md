@@ -3,30 +3,49 @@
 
 ## Purpose
 * Learn to identify the `Dead Steps` smell.
-* Understand which complications arise from having empty step definitions and how to spot them.
+* Learn how to search for dead steps and why it's important to remove them asap instead.
 
 ## Your Task
-Within the `Customer.feature` file there is a `Then` step that does not do anything. Find at least
-one such step definition and implement the correct assertion.
+Within the step implementation there are 3 steps that are not used by the `Customer.feature`file. 
+Find and delete them.
 
 ## Solution
 
 === "Hints"
     ??? tip "Hint A"
-        * You are looking for a `Then` step that is verifying if a customer was created successfully.
+        * After solving some exercises and understanding the business, you have maybe an idea which steps are unused.
+        * Review the `Customer.feature`file and then scroll through the step implementation, do you find it?
 
     ??? tip "Hint B"
-        * The relevant step is `Then the customer creation should be successful`.
-        * Look at the implementation of the code in te step definition.
+        * Two steps are empty at all, that means they provide no functionality.
+        * The third step implements the negation of finding a customer.
 
     ??? tip "Hint C"
-        * The relevant step is `Then the customer creation should be successful`.
-        * The step definition is an empty function that does not do anything.
-        * Think of what it should actually do and implement the correct assertion.
+        * The relevant steps are 
+            * `Given no customers exist`
+            * `When the customer Rose Smith is searched
+            * `Then the customer can not be found
+        * Brainstorm why this steps are not used anymore
 
     ??? tip "Step by Step Walkthrough"
-        * The relevant step is `Then the customer creation should be successful`.
-        * The step definition is an empty function that does not do anything.
-        * The function should implement an assertion of the error field.
-        * Assert that the error field (e.g. `this.error` in java or `t.err` in go) is null.
+        * The relevant steps are 
+            * `Given no customers exist`
+            * `When the customer Rose Smith is searched
+            * `Then the customer can not be found
+        * Possible explainations:
+            * The step was copied and renamed
+            * Somebody didn't find a step and created a similar one
+            * It was replaced with parameters or the input data in the scenario was changed
+            * Gold plating: implement a step for the future even if currently not used
+        * Remove the implementation from the step definition file.
     
+=== "Diffs"
+    === "Java"
+        :link: [GitHub Commit](https://github.com/Cucumber-Diseases/cucumber-diseases-java/commit/5c9cca1733d92ae6794d2301d744cff2c991dc54)
+    
+    === "Python"
+
+    === "C#"
+        The reqnroll extensions of MS Visual Studio provides a popup menue `Find unused Step Definitions`. That's the easiest way to solve this smell.
+
+    === "Go"
