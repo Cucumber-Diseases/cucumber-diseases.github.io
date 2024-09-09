@@ -2,31 +2,53 @@
 :link: [Related Smell: 013 - Test Code Impurity](/smells/013-test-code-impurity)
 
 ## Purpose
-* Learn to identify the `Missing Then Step` smell.
-* Understand which complications arise from having empty step definitions and how to spot them.
+* Learn to identify the `Test Code Impurity` smell.
+* See how this smell differs from the other smells and how complicated the refactoring is about, if there is already a lot of test automation code available.
 
 ## Your Task
-Within the `Customer.feature` file there is a `Then` step that does not do anything. Find at least
-one such step definition and implement the correct assertion.
+We will only change the step implementation file. Create a new file and add a driver implementation. Move all calls to the system under test to the driver class.
 
 ## Solution
 
 === "Hints"
     ??? tip "Hint A"
-        * You are looking for a `Then` step that is verifying if a customer was created successfully.
+        * How can we split the refactoring to reduce the risk?
 
     ??? tip "Hint B"
-        * The relevant step is `Then the customer creation should be successful`.
-        * Look at the implementation of the code in te step definition.
+        * We have steps wich deal with the creation and steps that provide the search business logic.
+        * Which is the simplest first refactoring?
 
     ??? tip "Hint C"
-        * The relevant step is `Then the customer creation should be successful`.
-        * The step definition is an empty function that does not do anything.
-        * Think of what it should actually do and implement the correct assertion.
+        * The simplest refactoring is moving the code from the step `Given there is a customer` and `Given there are some customers` to a driver class.
+        * Why is this so simple?
 
-    ??? tip "Step by Step Walkthrough"
-        * The relevant step is `Then the customer creation should be successful`.
-        * The step definition is an empty function that does not do anything.
-        * The function should implement an assertion of the error field.
-        * Assert that the error field (e.g. `this.error` in java or `t.err` in go) is null.
+    ??? tip "Hint D"
+        * The simplest refactoring is moving the code from the step `Given there is a customer` and `Given there are some customers` to a driver class.
+        * It handles only the `Given` steps to create customers in the system under test and it doesn't deal with state in the test implementation.
+        * We can create the new class and inject the driver into the step implementation.
+        * Then create a new method and move the code into it. Replace the code with a call to the driver instead.
+        * How to continue?
     
+    ??? tip "Step by Step Walkthrough"
+        * The simplest refactoring is moving the code from the step `Given there is a customer` and `Given there are some customers` to a driver class.
+        * It handles only the `Given` steps to create customers in the system under test and it doesn't deal with state in the test implementation.
+        * We can create the new class and inject the driver into the step implementation.
+        * Then create a new method and move the code into it. Replace the code with a call to the driver instead.
+        * Next we continue with the customer creation in the `When`steps. 
+        * Start with a public `error` field in the driver and access it in the step implementation.
+        * Then encapsulate the `error` with a method to check if the creation failed or was successful.
+        * Next move the search business logic to the driver class.
+        * Finally cleanup your step implementation. You get rid of the system under test and all fields dealing with results. There is only a reference to the driver class.
+
+
+=== "Diffs"
+    === "Java"
+        :link: [GitHub Commit](https://github.com/Cucumber-Diseases/cucumber-diseases-java/commit/7f1bc88a325fd86a4e42b8a75a363e2195af6a0a)
+    
+    === "Python"
+
+    === "C#"
+
+    === "Go"
+
+
