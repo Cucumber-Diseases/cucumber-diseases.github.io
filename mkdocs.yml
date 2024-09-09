@@ -73,8 +73,8 @@ nav:
     - smells/008-singular-plural-logic-clones.md
     - smells/009-dead-steps.md
     - smells/010-hardcoded-parameters.md
-    - smells/011-dependence-on-class-state.md
-    - smells/012-active-sideeffects-in-then-step.md
+    - smells/011-active-sideeffects-in-then-step.md
+    - smells/012-dependence-on-class-state.md
     - smells/013-test-code-impurity.md
   - Deliberate Exercise:
     - exercise/index.md
@@ -88,8 +88,8 @@ nav:
     - exercise/ex-008-singular-plural-logic-clones.md
     - exercise/ex-009-dead-steps.md
     - exercise/ex-010-hardcoded-parameters.md
-    - exercise/ex-011-dependence-on-class-state.md
-    - exercise/ex-012-active-sideeffects-in-then-step.md
+    - exercise/ex-011-active-sideeffects-in-then-step.md
+    - exercise/ex-012-dependence-on-class-state.md
     - exercise/ex-013-test-code-impurity.md
   - Contributing:
     - contrib/index.md

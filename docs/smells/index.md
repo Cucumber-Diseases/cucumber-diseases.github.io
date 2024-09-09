@@ -47,6 +47,6 @@ Regardless of the rating, all the impacts described are a problem. The whole pur
 | [008](008-singular-plural-logic-clones.md) | Singular-Plural Logic Clones | Duplicated steps for singular/plural cases. |
 | [009](009-dead-steps.md) | Dead Steps | Step definitions exist but are not used. |
 | [010](010-hardcoded-parameters.md) | Hardcoded Parameters | Using fixed values instead of parameters. |
-| [011](011-dependence-on-class-state.md) | Dependence on Class State | Excessive reliance on context or class state. |
-| [012](012-active-sideeffects-in-then-step.md) | Active Side Effects in Then Step | Changes of the application state in "Then" steps. |
+| [011](011-active-sideeffects-in-then-step.md) | Active Side Effects in Then Step | Changes of the application state in "Then" steps. |
+| [012](012-dependence-on-class-state.md) | Dependence on Class State | Excessive reliance on context or class state. |
 | [013](013-test-code-impurity.md) | Test Code Impurity | Mixing different test automation concerns in step definitions. |
