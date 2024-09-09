@@ -15,7 +15,7 @@ We will only change the step implementation file. Create a new file and add a dr
         * How can we split the refactoring to reduce the risk?
 
     ??? tip "Hint B"
-        * We have steps wich deal with the creation and steps that provide the search business logic.
+        * We have steps that deal with the creation and steps that provide the search business logic.
         * Which is the simplest first refactoring?
 
     ??? tip "Hint C"
