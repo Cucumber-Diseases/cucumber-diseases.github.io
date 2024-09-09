@@ -3,18 +3,19 @@
 
 ## Purpose
 * Learn to identify the `Hardcoded Parameters` smell.
-* Understand which complications arise from having empty step definitions and how to spot them.
+* Understand how hardcoded parameters are introducing duplication and decreasing flexibility in your code.
 
 ## Your Task
-Within the `Customer.feature` file there is a `When` and `Then` step a hardcoded parameter. Find at least
+Within the `Customer.feature` file there is a `When` and `Then` step witn a hardcoded parameter. Find at least
 one such step definition and implement the correct assertion.
 
 ## Solution
 
 === "Hints"
     ??? tip "Hint A"
-        * You are looking for steps with hardcoded paramters in the business calls.
-        * Hardcoded paramters can be of any type. In our exercise you neeed to find two strings
+        * You are looking for steps with hardcoded paramters in the business calls. 
+        * A hardcoded parameter is expressed in the Gherkin expression.
+        * Hardcoded paramters can be of any type. In our exercise you neeed to find two strings.
 
     ??? tip "Hint B"
         * The relevant step is `When the customer Sabine Mustermann is searched` and `Then the customer Sabine Mustermann can be found`.
