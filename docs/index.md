@@ -1,6 +1,6 @@
 # Introduction
 
-This content has a lot of different uses, and it can help with all kinds of different needs and interests. Whether you're an aspiring coder, a Cucumber enthusiast, or a workshop facilitator, we've got you covered. Let's break down the different ways you can leverage this material:
+This content has a lot of different uses, and it can help with all kinds of different needs and interests. Whether you're an aspiring coder, a Gherkin enthusiast, or a workshop facilitator, we've got you covered. Let's break down the different ways you can leverage this material:
 
 ## [Tutorials for the Practice Repositories](https://cucumber-diseases.github.io/repos/)
   - Learn how to set up and work with our repositories. You will find tutorials that guide you through getting started with our repositories and exercises.

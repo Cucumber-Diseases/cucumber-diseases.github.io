@@ -1,6 +1,6 @@
 # Practice Repositories
 
-To help users learn about and practice identifying and removing code smells in Gherkin and Cucumber, we have set up a series of practice repositories. Each repository is dedicated to a different programming language and provides a hands-on environment where you can work with Gherkin feature files and Cucumber scenarios. These repositories allow you to explore various code smells, understand their impact, and practice refactoring to remove them.
+To help users learn about and practice identifying and removing code smells in Gherkin and Cucumber, we have set up a series of practice repositories. Each repository is dedicated to a specific programming language and offers a hands-on environment where you can work with feature files and Gherkin scenarios, along with step implementations and frameworks like Cucumber for Java or equivalent tools for other languages. These repositories allow you to explore various code smells, understand their impact, and practice refactoring to remove them.
 
 ## Available Repositories
 
@@ -29,7 +29,7 @@ Each repository contains:
 
 - **Feature Files:** Starting with `Customer.feature`, where you can observe and practice identifying Gherkin and Cucumber-related code smells.
 - **Tags for Smells:** The commit history of the `main` branch includes Git tags that correspond to specific code smells, allowing you to jump to a state where a particular smell is present.
-- **Source Code of the Example Service**: Each repository contains a very slim implementation of a service that will be tested. It is simple and easy on purpose to not destract from the testing code.
+- **Source Code of the Example Service i.e. System Under Test**: Each repository contains a very slim implementation of a service that will be tested. It is simple and easy on purpose to not destract from the testing code.
 - **Test Step Implementation**: The test suite is set up in a way that it works from the start. It should run all tests green directly after cloning and contains all relevant step definitions for the Gherkin feature file included.
 
 ## Setting Up the Project
