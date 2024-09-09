@@ -12,11 +12,13 @@ Within the `Customer.feature` file there is a scenario with multiple `Given` ste
 
 === "Hints"
     ??? tip "Hint A"
-        * You are looking for a `Then` step that is verifying if a customer was created successfully.
+        * You are looking for multiple `Given` step with only one parameter.
+        * There are two `Given` steps which need to be called in sequence.
 
     ??? tip "Hint B"
         * The relevant step are `Given the customer first name is "Max"`and `And the customer last name is "Mustermann"`.
         * Look at the implementation in the step definition, how it clutters the scenario and the initialized fields.
+        * What happens if you only call one step?
         * Identify an existing consistent expression instead.
 
     ??? tip "Step by Step Walkthrough"

@@ -6,8 +6,8 @@
 * Understand how to clean it up and how to find all occurances spread over different locations.
 
 ## Your Task
-Within the step implementation file there is field, which is intialized by a `Given`step in the `Customer.feature`but never ued. Find at least
-one such fieldkd and remove the code and the step.
+Within the step implementation file there is field, which is intialized by a `Given`step in the `Customer.feature`but never used. Find at least
+one such field and remove the code and the step.
 
 ## Solution
 

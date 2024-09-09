@@ -7,7 +7,7 @@ Possible reasons include:
 
 * Redundancy: The parameter duplicates information already available elsewhere.
 * Obsolete Logic: The parameter was relevant in an earlier version of the scenario but is no longer necessary.
-*Incomplete Implementation: The parameter was added but not fully integrated into the scenario.
+* Incomplete Implementation: The parameter was added but not fully integrated into the scenario.
 
 ## Impact
 !!! danger "Misleading Code"

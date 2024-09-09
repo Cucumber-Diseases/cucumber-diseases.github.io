@@ -13,11 +13,10 @@ one such step definition and implement the correct assertion.
 
 === "Hints"
     ??? tip "Hint A"
-        * You are looking for a scenario with multiple `Given` steps for creating customers.
+        * You are looking for empty `Then` steps.
 
     ??? tip "Hint B"
-        * The relevant steps is `` and .
-        * Look at the implementation of the code in the step definition.
+        * The `Then` step you are searching for is verifying the creation of a customers.
 
     ??? tip "Hint C"
         * The relevant step is `Then the customer creation should be successful`.

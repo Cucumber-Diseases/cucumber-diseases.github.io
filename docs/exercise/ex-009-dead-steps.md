@@ -23,15 +23,15 @@ Find and delete them.
     ??? tip "Hint C"
         * The relevant steps are 
             * `Given no customers exist`
-            * `When the customer Rose Smith is searched
-            * `Then the customer can not be found
+            * `When the customer Rose Smith is searched`
+            * `Then the customer can not be found`
         * Brainstorm why this steps are not used anymore
 
     ??? tip "Step by Step Walkthrough"
         * The relevant steps are 
             * `Given no customers exist`
-            * `When the customer Rose Smith is searched
-            * `Then the customer can not be found
+            * `When the customer Rose Smith is searched`
+            * `Then the customer can not be found`
         * Possible explainations:
             * The step was copied and renamed
             * Somebody didn't find a step and created a similar one
