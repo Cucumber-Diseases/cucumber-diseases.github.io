@@ -10,7 +10,7 @@ The "Dependence on Class State" occurs when step definitions rely heavily on cla
     Storing state in class fields or context introduces tight coupling between steps. As tests evolve, changing the state management in one step could inadvertently break others, leading to fragile and harder-to-maintain test cases.
 
 !!! failure "Increased Complexity"
-    Shraing state always increases complexity, as developers need to understand not only the logic of each step but also how the state is manipulated across multiple steps. This makes the tests more prone to errors and bugs, especially in large test suites.
+    Sharing state always increases complexity, as developers need to understand not only the logic of each step but also how the state is manipulated across multiple steps. This makes the tests more prone to errors and bugs, especially in large test suites.
 
 !!! warning "Increased Coupling"
     Using context or class fields to manage state creates implicit dependencies between steps, violating the principle of isolation between tests. This can lead to flakiness, where tests might pass or fail depending on the order in which they are executed.

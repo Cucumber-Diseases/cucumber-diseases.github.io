@@ -3,30 +3,57 @@
 
 ## Purpose
 * Learn to identify the `Dependence on Class State` smell.
-* Understand which complications arise from having empty step definitions and how to spot them.
+* Understand how complexity increases from having shared data on multiple places instead of local parameters.
 
 ## Your Task
-Within the `Customer.feature` file there is a `Then` step that does not do anything. Find at least
-one such step definition and implement the correct assertion.
+The step implementation has different fields i.e class state, which can be grouped by system under test, input data and results. 
+We want to get rid of the input data and replace it with local parameters and variables.
 
 ## Solution
 
 === "Hints"
     ??? tip "Hint A"
-        * You are looking for a `Then` step that is verifying if a customer was created successfully.
+        * Identify the three groups of class state in your step implementation:
+            * system under test
+            * input data
+            * results
 
     ??? tip "Hint B"
-        * The relevant step is `Then the customer creation should be successful`.
-        * Look at the implementation of the code in te step definition.
+        * The input data state is storing information about the customers to be created: first name, last name, ...
+        * Remove the first name and last name and analyse the compiler errors.
+        * What else can we remove now?
 
     ??? tip "Hint C"
-        * The relevant step is `Then the customer creation should be successful`.
-        * The step definition is an empty function that does not do anything.
-        * Think of what it should actually do and implement the correct assertion.
+        * Remove the first name and last name.
+        * Remove all `Given`steps in your step implementation and in the `Customer.feature` file dealing with first name and last name. 
+        * How can we deal with the missing data in the `When` and `Then` steps that instead?
+
+    ??? tip "Hint D"
+        * Remove the first name and last name.
+        * Remove all `Given`steps in your step implementation and in the `Customer.feature` file dealing with first name and last name. 
+        * Add the parameters `firstName` and `lastName` to 'When the customer is created'. 
+        * Remove `Then the customer can be found` because there is already a expression with the parameters.
+        * Change the `Customer.feature` file accordingly and pass the parameters via the steps.
+        * Which class state can be remove now?
 
     ??? tip "Step by Step Walkthrough"
-        * The relevant step is `Then the customer creation should be successful`.
-        * The step definition is an empty function that does not do anything.
-        * The function should implement an assertion of the error field.
-        * Assert that the error field (e.g. `this.error` in java or `t.err` in go) is null.
+        * Remove the first name and last name.
+        * Remove all `Given`steps in your step implementation and in the `Customer.feature` file dealing with first name and last name. 
+        * Add the parameters `firstName` and `lastName` to 'When the customer is created'. 
+        * Remove `Then the customer can be found` because there is already a expression with the parameters.
+        * Change the `Customer.feature` file accordingly and pass the parameters via the steps.
+        * Remove the state for handling a second customer in the same way as previously the first name and last name.
+        * Pass parameters to the expression for the second customer. 
+        * Merge the expression and delete the unnecessary functions for example: 'Then the customer {} {} can be found'  and 'Then the second customer {} {} can be found' 
     
+=== "Diffs"
+    === "Java"
+        :link: [GitHub Commit](https://github.com/Cucumber-Diseases/cucumber-diseases-java/commit/7f1bc88a325fd86a4e42b8a75a363e2195af6a0a)
+    
+    === "Python"
+
+    === "C#"
+
+    === "Go"
+
+
