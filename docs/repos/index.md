@@ -27,8 +27,10 @@ Replace `<language>` with the programming language of your choice, such as `java
 ## Repository Structure
 Each repository contains:
 
+- **Starting Point**: The 'main' branch serves as the starting point for your refactoring journey. Check it out and get started!
+- **Step By Step Solution**: Each repository includes a second branch called step-by-step, which contains a complete commit history of fixes for the various code smells.
 - **Feature Files:** Starting with `Customer.feature`, where you can observe and practice identifying Gherkin and Cucumber-related code smells.
-- **Tags for Smells:** The commit history of the `main` branch includes Git tags that correspond to specific code smells, allowing you to jump to a state where a particular smell is present.
+- **Tags for Smells:** The commit history includes Git tags that correspond to specific code smells, allowing you to jump to a state where a particular smell is present.
 - **Source Code of the Example Service i.e. System Under Test**: Each repository contains a very slim implementation of a service that will be tested. It is simple and easy on purpose to not destract from the testing code.
 - **Test Step Implementation**: The test suite is set up in a way that it works from the start. It should run all tests green directly after cloning and contains all relevant step definitions for the Gherkin feature file included.
 
