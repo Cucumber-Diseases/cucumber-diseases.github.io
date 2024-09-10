@@ -6,7 +6,7 @@
 * Understand the different meaning of the steps `Given`versus `When` even the functionality is the same.
 
 ## Your Task
-Within the `Customer.feature` file there are multiple occurance of this smell. The exercise is prepared in a way that you only need to refactor steps in the scenarios. Be aware that this is not always the case.  
+Within the `Customer.feature` file there are multiple occurances of this smell. The exercise is prepared in a way that you only need to refactor steps in the scenarios. Be aware that this is not always the case.  
 Find all scenarios with the smell and replace the `When` steps with `Given` instead.
 
 ## Solution

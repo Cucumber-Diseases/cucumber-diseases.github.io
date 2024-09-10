@@ -30,5 +30,5 @@ one such field and remove the code and the step.
         * A default birthday is passed to the business function 'Add Customer' in multiple steps.
         * Decide to use the default birthday, since there is no assertion on the correct birthday.
         * Remove the in the step from the step implementation file .
-        * Remove the in `Custoer.feature' the step `And the customer's birthday is 2000/03/19`.
+        * Remove the step `And the customer's birthday is 2000/03/19` in the `Customer.feature` file.
     

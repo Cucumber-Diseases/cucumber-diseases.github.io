@@ -16,17 +16,17 @@ Find the `Then` steps with the smell and move the state change to a fitting `Whe
         * You are looking for a `Then` steps that deal with the verification of the second customer.
 
     ??? tip "Hint B"
-        * The relevant step are `Then the second customer can be found` and `Then the second customer creation should fail`.
+        * The relevant step are `Then the second customer creation should fail` and `Then the second customer can be found`.
         * Look at the implementation of the code in the step definition.
         * Which code is concerning the active side effect?
 
     ??? tip "Hint C"
-        * The relevant step are `Then the second customer can be found` and `Then the second customer creation should fail`.
+        * The relevant step are `Then the second customer creation should fail` and `Then the second customer can be found`.
         * Both implementations are creating a new customer object!
         * Where does this code belong to?
 
     ??? tip "Step by Step Walkthrough"
-        * The relevant step are `Then the second customer can be found` and `Then the second customer creation should fail`.
+        * The relevant step are `Then the second customer creation should fail` and `Then the second customer can be found`.
         * Both implementations are creating a new customer object!
         * Remove the creation of the customer object.
         * Create the customer in the step `When the second customer is created` instead. 
