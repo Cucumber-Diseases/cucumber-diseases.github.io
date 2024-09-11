@@ -27,7 +27,7 @@ the 2 steps, learn how to merge them and which complications you shoud consider.
 
 === "Diffs"
     === "Java"
-        :link: [GitHub Commit](https://github.com/Cucumber-Diseases/cucumber-diseases-java/commit/c95d3624178dc279fff2cbfb5dcf48af3f70aa9d)
+        :link: [GitHub Commit](https://github.com/Cucumber-Diseases/cucumber-diseases-java/commit/e9381dd48da20a3357dae76d7d15ef61ada66744)
     
     === "Python"
 

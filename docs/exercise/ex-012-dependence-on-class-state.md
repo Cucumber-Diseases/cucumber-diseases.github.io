@@ -48,7 +48,7 @@ We want to get rid of the input data and replace it with local parameters and va
     
 === "Diffs"
     === "Java"
-        :link: [GitHub Commit](https://github.com/Cucumber-Diseases/cucumber-diseases-java/commit/7f1bc88a325fd86a4e42b8a75a363e2195af6a0a)
+        :link: [GitHub Commit](https://github.com/Cucumber-Diseases/cucumber-diseases-java/commit/b04a747098b0813640f6c7ac35bc163c54465967)
     
     === "Python"
 

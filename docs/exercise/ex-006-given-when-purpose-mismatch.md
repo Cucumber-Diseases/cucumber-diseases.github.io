@@ -49,4 +49,4 @@ Find all scenarios with the smell and replace the `When` steps with `Given` inst
 
 === "Diffs"
     === "Gherkin"
-        :link: [GitHub Commit](https://github.com/Cucumber-Diseases/cucumber-diseases-java/commit/75982e67a4d900351d7bfe20fb2a83191bda1dcc)
+        :link: [GitHub Commit](https://github.com/Cucumber-Diseases/cucumber-diseases-java/commit/cf2078f5a223f96665d33d460dc465d55114f9d7)

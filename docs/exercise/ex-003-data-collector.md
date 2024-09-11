@@ -27,3 +27,13 @@ Within the `Customer.feature` file there is a scenario with multiple `Given` ste
         * Replace the original steps with `Given the customer name is Max Mustermann`
         * Delete the dead step implementations `Given the customer first name is "Max"`and `And the customer last name is "Mustermann"`.
     
+=== "Diffs"
+    === "Java"
+        :link: [GitHub Commit](https://github.com/Cucumber-Diseases/cucumber-diseases-java/commit/80c149e2103d3015e72bae9ab54625aa984e2e57)
+    
+    === "Python"
+
+    === "C#"
+
+    === "Go"
+

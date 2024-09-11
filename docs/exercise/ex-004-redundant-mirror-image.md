@@ -23,5 +23,15 @@ Within the step implementation are two steps with a similar implemention but an 
         * The relevant steps are `When the customer is created` and `When an invalid customer is created`.
         * Move the expression `When an invalid customer is created` to the implementation of `When the customer is created`.
         * Rename the name of the function to something more general.
-        * Remove the code of `When an invalid customer is created`.
+        * Remove the code of `When an invalid customer is created`. 
     
+=== "Diffs"
+    === "Java"
+        :link: [GitHub Commit](https://github.com/Cucumber-Diseases/cucumber-diseases-java/commit/46b2462841b90acc1a0511e2e98bdeb98e3e1935)
+    
+    === "Python"
+
+    === "C#"
+
+    === "Go"
+

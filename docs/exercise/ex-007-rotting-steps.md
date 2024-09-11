@@ -29,11 +29,5 @@ Find the step definition and remove it.
         * Delete the step implementation to avoid the `Dead Steps`smell.
 
 === "Diffs"
-    === "Java"
-        :link: [GitHub Commit](https://github.com/Cucumber-Diseases/cucumber-diseases-java/commit/707c18efc3edab9785dd3a11338147892cfd0119)
-    
-    === "Python"
-
-    === "C#"
-
-    === "Go"
+    === "Gherkin"
+        :link: [GitHub Commit](https://github.com/Cucumber-Diseases/cucumber-diseases-java/commit/8f129678992acef8b51896117f6ebc3028526ae1)

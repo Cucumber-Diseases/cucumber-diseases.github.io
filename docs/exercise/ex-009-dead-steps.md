@@ -41,7 +41,7 @@ Find and delete them.
     
 === "Diffs"
     === "Java"
-        :link: [GitHub Commit](https://github.com/Cucumber-Diseases/cucumber-diseases-java/commit/5c9cca1733d92ae6794d2301d744cff2c991dc54)
+        :link: [GitHub Commit](https://github.com/Cucumber-Diseases/cucumber-diseases-java/commit/cb0b2d68fb727dc34597e2ea5072831d3fa37d59)
     
     === "Python"
 

@@ -31,7 +31,7 @@ one such step definition and implement the correct assertion.
 
 === "Diffs"
     === "Java"
-        :link: [GitHub Commit](https://github.com/Cucumber-Diseases/cucumber-diseases-java/commit/af50463422630062a14596d66164249274249fe4)
+        :link: [GitHub Commit](https://github.com/Cucumber-Diseases/cucumber-diseases-java/commit/39a124e645f3fb991464c0761e2f295a442f98ed)
     
     === "Python"
 

@@ -35,7 +35,7 @@ Find the `Then` steps with the smell and move the state change to a fitting `Whe
     
 === "Diffs"
     === "Java"
-        :link: [GitHub Commit](https://github.com/Cucumber-Diseases/cucumber-diseases-java/commit/7f1bc88a325fd86a4e42b8a75a363e2195af6a0a)
+        :link: [GitHub Commit](https://github.com/Cucumber-Diseases/cucumber-diseases-java/commit/16a21fa3d5411ab632a831d81ad1a6e930ae4513)
     
     === "Python"
 
