@@ -48,4 +48,6 @@ Find and delete them.
     === "C#"
         The reqnroll extensions of MS Visual Studio provides a popup menue `Find unused Step Definitions`. That's the easiest way to solve this smell.
 
+        :link: [GitHub Commit](https://github.com/Cucumber-Diseases/cucumber-diseases-csharp/commit/506d3c84cbc389b2e8bd936e96d5071a42658f81)
+
     === "Go"

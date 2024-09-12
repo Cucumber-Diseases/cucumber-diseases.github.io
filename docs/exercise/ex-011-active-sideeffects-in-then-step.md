@@ -40,6 +40,7 @@ Find the `Then` steps with the smell and move the state change to a fitting `Whe
     === "Python"
 
     === "C#"
+        :link: [GitHub Commit](https://github.com/Cucumber-Diseases/cucumber-diseases-csharp/commit/43d56bf2cbdea90cf1e88487cafc39fdbf42d2ce)
 
     === "Go"
 
