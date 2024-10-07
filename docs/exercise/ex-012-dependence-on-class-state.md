@@ -1,5 +1,5 @@
-# Exercise 011: Remove Dependence on Class State
-:link: [Related Smell: 011 - Dependence on Class State](/smells/011-dependence-on-class-state)
+# Exercise 012: Remove Dependence on Class State
+:link: [Related Smell: 012 - Dependence on Class State](/smells/012-dependence-on-class-state)
 
 ## Purpose
 * Learn to identify the `Dependence on Class State` smell.

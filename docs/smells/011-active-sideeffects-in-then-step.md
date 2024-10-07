@@ -1,4 +1,4 @@
-# 012: Active Side Effects in Then Step
+# 011: Active Side Effects in Then Step
 The *Active Side Effects in Then Step* occurs when a `Then` step, which should be used exclusively for verifying outcomes, is incorrectly used to perform actions that modify the application's internal state, such as creating or altering data.
 
 This is a case of misaligned purpose, where operations meant for 

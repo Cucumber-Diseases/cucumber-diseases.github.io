@@ -1,4 +1,4 @@
-# 011: Dependence on Class State
+# 012: Dependence on Class State
 The "Dependence on Class State" occurs when step definitions rely heavily on class fields or context objects to store and share data between steps. Often, this state is duplicated or overlaps with previously prepared data in the application, leading to unnecessary complexity. In this scenario, the state is stored either in the fields of the step definition class or in a shared context object, which is akin to a global variable. This approach introduces hidden dependencies between steps and can result in tightly coupled tests where the behavior of one step is implicitly tied to the internal state managed by the class or context. This creates a brittle test structure where understanding and maintaining the state becomes challenging, especially as the test suite grows.
 
 ## Impact
