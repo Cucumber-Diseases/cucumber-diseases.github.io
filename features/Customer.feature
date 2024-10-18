@@ -54,8 +54,7 @@ Feature: Customer
       Given the second customer is Max Mustermann
       When the second customer is created
       Then the second customer creation should fail
-
-
+      
   Rule: Existing customers can be searched
 
     Scenario: Should find an existing customer
