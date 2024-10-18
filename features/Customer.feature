@@ -46,6 +46,15 @@ Feature: Customer
       When the second customer is created
       Then the second customer creation should fail
 
+    Scenario: Handle subsequent duplicate creation
+      Given the customer name is Max Mustermann
+      When the customer is created
+      Then the customer creation should be successful
+      And the customer Max Mustermann can be found
+      Given the second customer is Max Mustermann
+      When the second customer is created
+      Then the second customer creation should fail
+      
   Rule: Existing customers can be searched
 
     Scenario: Should find an existing customer
@@ -58,6 +67,18 @@ Feature: Customer
       And the customer is created
       When the customer Sabine Mustermann is searched
       Then the number of customers found is 1
+
+     Scenario: Search for multiple customers
+      Given the customer name is Max Mustermann
+      When the customer is created
+      Then the customer creation should be successful
+      And the customer Max Mustermann can be found
+      Given the second customer is Sabine Mustermann
+      When the second customer is created
+      Then the second customer creation should be successful
+      And the customer Sabine Mustermann can be found
+      When all customers are searched
+      Then the number of customers found is 2
 
     Scenario: Cannot find customer that does not exist
       Given there are no customers
