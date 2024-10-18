@@ -76,6 +76,7 @@ nav:
     - smells/011-active-sideeffects-in-then-step.md
     - smells/012-dependence-on-class-state.md
     - smells/013-test-code-impurity.md
+    - smells/014-multiple-behaviours-in-scenario.md
   - Deliberate Exercise:
     - exercise/index.md
     - exercise/ex-001-missing-then.md
@@ -90,7 +91,8 @@ nav:
     - exercise/ex-010-hardcoded-parameters.md
     - exercise/ex-011-active-sideeffects-in-then-step.md
     - exercise/ex-012-dependence-on-class-state.md
-    - exercise/ex-013-test-code-impurity.md
+    - exercise/ex-013-test-code-i mpurity.md
+    - exercise/ex-014-scenario-overload.md
   - Contributing:
     - contrib/index.md
     - contrib/add_smell.md
